@@ -1,0 +1,28 @@
+mixin slider 
+    .container 
+        section.slider 
+            .title.slider__title Наша история
+            .slider__wrapper 
+                .slider__buttons.slider-row
+                    .buttons-date.slider__buttons-date  
+                        .button.buttons-date__item 2015
+                        .button.buttons-date__item 2016
+                        .button.buttons-date__item.active 2017
+                        .button.buttons-date__item 2018
+                        .button.buttons-date__item 2019
+                        .button.buttons-date__item 2020
+                        .button.buttons-date__item 2021
+                        .button.buttons-date__item 2022
+                    .slider-buttons.slider__buttons-arrow
+                        .slider-buttons__item.left-slide
+                            +slider-arrow-svg.arrow-svg.arrow-svg--left
+                        .slider-buttons__item.right-slide
+                            +slider-arrow-svg.arrow-svg.arrow-svg--right
+                .slider-row.slide
+                    .slide__content
+                        .slide__content-img
+                            +picture(src = 'train')
+                        .slide__content-text
+                            .slide__title 2017
+                            .slide__text Период активной деятельности нашего совместного предприятия как отдельной и независимой бизнес-единицы на рынке перевозок контейнеров начался в 2016 году. Это был год, когда акционерами Компании были согласованы и утверждены ключевые  принципы и стратегические направления развития. Несмотря на сложный период  становления базовых регламентов деятельности, нам удалось уже в первый год удвоить объём перевозок по сравнению с 2015 годом и нарастить хорошую клиентскую базу для последующих периодов.
+                    

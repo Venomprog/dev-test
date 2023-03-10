@@ -1,0 +1,29 @@
+mixin card  
+    section.contact-page__card
+        .container
+            .contact-page__card-row
+                - for (i = 0; i < 4; i++)
+                    .contact-page__card-col 
+                        .card.contact-page__card-item 
+                            .contact-page__card-item--top
+                                .card__title.contact-page__card-item--title  «План Б всегда где-то рядом»
+                            .contact-page__card-item--bot
+                                .card__news.card__news-wrapper
+                                    .card__news-item
+                                        a.news-link.card__news-item-link(href="#") Новости рынка
+                                .card__footer.card__footer-wrapper
+                                    .card__footer-date
+                                        .card__footer-date--num
+                                            |23
+                                        .card__footer-date--text
+                                            .card__footer-date--text-1
+                                                |december
+                                            .card__footer-date--text-2
+                                                |december
+                                            
+                                    .card__footer-btn
+                                        .button-arrow
+                                            +card-arrow-svg.hover-green
+                            .card__animate 
+                                +card-animate-logo-svg
+                

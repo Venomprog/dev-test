@@ -1,0 +1,95 @@
+.form{
+    
+    textarea{
+        display: block;
+        resize: none;
+    }
+    &__input{
+        margin-top: 8px;
+        width: 100%;
+
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 160%;
+        color: rgba(6, 8, 8, 0.5);
+        padding: 19px 0px 19px 20px;
+        border: 1px solid #E3E3E3;
+        transition: 0.5s;
+        color: #181D1D;
+        outline: none;
+        &::placeholder{
+            color: rgba(6, 8, 8, 0.5);
+        }
+        &:hover{
+            border-color: #006525;
+        }
+        &:focus{
+            border-color: #006525;
+        }
+    }
+    &__checkbox{
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+
+        cursor: pointer;
+        &-box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 12px;
+
+            width: rem(24px);
+            height: rem(24px);
+
+            border: 1px solid #E3E3E3;
+            transition: 0.5s;
+            &:hover{
+                border: 1px solid #006525;
+            }
+        }
+        &-text{
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 130%;
+            a{
+                font-weight: 700;
+                color: #181D1D;
+                text-decoration: none;
+            }
+        }
+        &-input{
+            position: absolute;
+            left: 0;
+            top: 1000;
+
+            visibility: hidden;
+            &:checked~.form__checkbox-box{
+                border-color: #006525;
+                background-color: #006525;
+            }
+        }
+    
+    }
+    &__button{
+        margin-top: 20px;
+        width: 100%;
+        &-submit{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 22px 222px;
+
+            width: 100%;
+
+            cursor: pointer;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 130%;
+            background: #006525;
+            color: white;
+            border: none;
+        }
+    }
+}

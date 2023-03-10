@@ -1,0 +1,14 @@
+extends ../layouts/master
+
+
+
+block content
+  +card
+  +modal
+  +file-card
+  .select-wrapper 
+    .select
+      select.select__select(width='100%')
+        each item in ['Италия', 'Япония', 'Германия']
+          option(value=item)
+            |#{item}

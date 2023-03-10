@@ -1,0 +1,128 @@
+.slider{
+    margin-top: rem(200px);
+    padding-bottom: rem(60px);
+    color: #181D1D;
+
+    &__title{
+        margin-bottom: rem(60px);
+
+        font-weight: 700;
+        font-size: rem(46px);
+        line-height: 120%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+
+        @media (max-width: ($breakpoint - 1px)){
+            margin-bottom: rem(20px);
+
+            font-weight: 700;
+            font-size: rem(18px);
+            line-height: 120%;
+        }
+    }
+    &-row{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+    
+    &__buttons{
+        margin-bottom: rem(60px);
+        @media (max-width: ($breakpoint - 1px)){
+            margin-bottom: rem(20px);
+        }
+        &-date{
+            
+            @media (max-width: ($breakpoint - 1px)) {
+                padding: 0 20px;
+                margin-left: -20px;
+                
+                flex-shrink: 0;
+                width: calc(100% + 20px * 2);
+                
+                overflow-x: scroll;
+                @include scrollbar-hidden;
+            }
+            
+        }
+        &-arrow{
+            $comp: &;
+            display: flex;
+            gap: rem(8px);
+
+            @media (max-width: ($breakpoint - 1px)) {
+                display: none;
+                &--pag{
+                    display: flex;
+                }
+            }
+            &--pag{
+                gap: rem(23px);
+                justify-content: flex-end;
+                @media (max-width: ($breakpoint - 1px)){
+                    gap: rem(4px);
+                }
+            }
+            
+
+        }
+    }
+}
+
+.slider-buttons{
+    $comp: &;
+    cursor: pointer;
+    @media (max-width: ($breakpoint - 1px)) {
+        width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+        flex-shrink: 0;
+    }
+
+    &--big {
+        @media (max-width: ($breakpoint - 1px)){
+            margin-top: rem(86px);
+        }
+        #{$comp} {
+            
+            &__item {
+                --size: #{rem(140px)};
+                @media (max-width: ($breakpoint - 1px)) {
+                    --size: #{rem(48px)};
+
+                    border: 1.5px solid rgba($color: #ffffff, $alpha: 0.3);
+                    transform: matrix(-1, 0, 0, 1, 0, 0);
+                }
+                .arrow-svg{
+                    width: rem(28px);
+                    height: rem(28px);
+                    path{
+                        stroke: white;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    &__item{
+        --size: #{rem(58px)};
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        width: var(--size);
+        height: var(--size);
+
+        border: 1px solid #E3E3E3;
+        transform: matrix(-1, 0, 0, 1, 0, 0);
+
+        .arrow-svg{
+            width: rem(20px);
+            height: rem(20px);
+            &--left{
+                rotate: (180deg);
+            }
+        }
+    }
+}

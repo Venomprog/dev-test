@@ -1,0 +1,4 @@
+mixin picture
+    picture.picture(class=attributes.class)
+        source(srcset=`assets/images/${attributes.src}.webp` type="image/webp")
+        img(src=`assets/images/${attributes.src}.jpg`, alt="")

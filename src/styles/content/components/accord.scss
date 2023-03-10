@@ -1,0 +1,112 @@
+.accord{
+    $comp: &;
+
+    width: calc(#{$col-part-d} * 8 - #{$col-gap-d});
+
+    &--alt {
+        #{$comp}__item {
+            padding-bottom: rem(20px);
+        }
+    }
+
+    &__item{
+        margin-bottom: rem(20px);
+
+        border: 1px solid #E3E3E3;
+        &.active{
+            // .accord__row--main{
+            //     display: block;
+            // }
+            .accord__row-button{
+                background: #006525;
+            }
+            .accord__row-button-svg{
+                rotate: (-180deg);
+                path{
+                    stroke: #ffffff;
+                }
+            }
+        }
+    }
+    &__row{
+
+        &--top{
+            padding-left: rem(48px);
+
+            display: flex;
+            flex-shrink: 0;
+            justify-content: space-between;
+            gap: rem(48px);
+
+            
+            cursor: pointer;
+        }
+
+        &--main{
+            border-top: 1px solid #E3E3E3;
+            display: none;
+            padding: 0 calc(#{$col-part-d});
+            padding-top: rem(60px);
+            padding-bottom: rem(59px);
+            &.active{
+                display: block;
+            }
+        }
+
+        &-col{
+            &:nth-child(2){
+                margin-left: rem(40px);
+            }
+        }
+        &-title{
+            display: flex;
+            align-items: center;
+
+            font-weight: 700;
+            font-size: rem(18px);
+            line-height: 150%;
+            letter-spacing: -0.02em;
+            color: #181D1D;
+        }
+        &-text{
+            font-weight: 500;
+            font-size: rem(16px);
+            line-height: 160%;
+
+            &--grey{
+                margin-bottom: rem(4px);
+
+                font-weight: 700;
+                font-size: rem(11px);
+                line-height: 120%;
+                letter-spacing: -0.02em;
+                text-transform: uppercase;
+                color: rgba(6, 8, 8, 0.5);
+            }
+        }
+        &-button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: rem(117px);
+            height: rem(117px);
+            flex-shrink: 0;
+
+            background: none;
+            transition: 0.5s;
+            &-svg{
+                transition: 0.5s;
+                path{
+                    stroke: #181D1D;
+                }
+            }
+        }
+        
+        &-date{
+            margin-top: rem(20px);
+
+            display: flex;
+        }
+    }
+}

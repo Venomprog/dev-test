@@ -1,0 +1,15 @@
+extends ../layouts/master
+
+block content
+    .container
+        section.team 
+            .team__row 
+                .team__col 
+                    .team__img
+                        +picture(src = 'director')
+                        .team__img-button
+                            +add-svg
+                    .team__title Гром <br> Алексей Николаевич
+                    .team__subtitle Генеральный директор, Председатель Правления
+    +slider
+    +pag-slider

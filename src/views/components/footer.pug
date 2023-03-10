@@ -1,0 +1,232 @@
+mixin footer
+    footer.container-fluid.footer 
+        .container.footer--desk
+            .footer__row
+                .footer__col.footer__logo
+                    .logo
+                        a.footer__logo-link(href="#") 
+                            +footer-logo-svg
+                .footer__col.footer__button
+                    a.footer__col-link(href="#")
+                        .footer__button-icon
+                            +zig-zag-logo-svg.footer__button-icon-svg
+                        .footer__button-text
+                            |Услуги
+                        .footer__button-arrow
+                            +footer-arrow-svg 
+                .footer__col.footer__button
+                    a.footer__col-link(href="#")
+                        .footer__button-icon
+                            +footer-map-svg.footer__button-icon-svg
+                        .footer__button-text
+                            |Карта маршрутов
+                        .footer__button-arrow
+                            +footer-arrow-svg 
+                .footer__col.footer__button
+                    a.footer__col-link(href="#")
+                        .footer__button-icon
+                            +search-status-svg.footer__button-icon-svg
+                        .footer__button-text
+                            |Отслеживание грузов
+                        .footer__button-arrow
+                            +footer-arrow-svg 
+            .footer__row 
+                .footer__col.footer__contact-links 
+                    //-Сделать разделение на 2 блока, блок с медиа и блок с политикой
+                    .footer-mid-col-media 
+                        .footer__col-phone-link.footer-text-link
+                            a.footer-link.footer-phone-link(href="tel:74959959591") +7 495 995-95-91
+                        .footer__col-mail-link.footer-text-link
+                            a.footer-link.footer-mail-link(href="mailto:utlc@utlc.com") utlc@utlc.com 
+                        .footer__col-media-links
+                            a.footer__col-media-links_tg(href="#")
+                                +footer-tg-svg
+                            a.footer__col-media-links_dzen(href="#")
+                                +footer-dzen-link
+                            a.footer__col-media-links_chat(href="#")
+                                +footer-chat-link 
+                    .footer__politics
+                        .footer__polotics-list 
+                            a.footer__politics-item(href="#") Политика в отношении обработки персональных данных
+                            a.footer__politics-item(href="#") Политика по КС
+                .footer__col.footer__page-links
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 О компании
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Органы управления и контроля
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Реестродержатель
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Документы
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Дипломы и сертификаты
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 Закупки
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Календарь мероприятий
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") План закупок
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Личный кабинет поставщика
+                    .footer__page-links-politics
+                        a.footer__page-links-item(href="#") Пресс-центр
+                        a.footer__page-links-item(href="#") ERAI
+                .footer__col.footer__page-links
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 Корпоративная социальная ответственность
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Экология
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Благотворительность
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") UTLC CUP
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Карьера
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 One million club
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Календарь событий
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Отраслевые новости
+                    .footer__page-links-politics.footer-politics-link-mg
+                        a.footer__page-links-item(href="#") Контакты
+                        a.footer__page-links-item(href="#") Часто задавые вопросы
+            .footer__row.footer-bot-row 
+                .footer-bot-row__col 
+                    .company |© АО «ОТЛК ЕРА», 2023
+                .footer-bot-row__col 
+                    .partners-row
+                        .partners-row__col 
+                            img(src="assets/images/footer-partner-3.png", alt="Лого партнера компании")
+                        .partners-row__col
+                            img(src="assets/images/footer-partner-2.png", alt="Лого партнера компании")
+                        .partners-row__col 
+                            img(src="assets/images/footer-partner-1.png", alt="Лого партнера компании")
+                .footer-bot-row__col 
+                    .copyright.copyright--big
+                        a.copyright__link(href="#") Сделано в 
+                            span.copyryght__link_green CloudMill
+        .container.footer--mobile
+            .footer__row
+                .footer__col-button--mobile 
+                    .footer__col.footer__button
+                        a.footer__col-link(href="#")
+                            .footer__button-icon
+                                +zig-zag-logo-svg.footer__button-icon-svg
+                            .footer__button-text
+                                |Услуги
+                            .footer__button-arrow
+                                +footer-arrow-svg 
+                    .footer__col.footer__button
+                        a.footer__col-link(href="#")
+                            .footer__button-icon
+                                +footer-map-svg.footer__button-icon-svg
+                            .footer__button-text
+                                |Карта маршрутов
+                            .footer__button-arrow
+                                +footer-arrow-svg 
+                    .footer__col.footer__button
+                        a.footer__col-link(href="#")
+                            .footer__button-icon
+                                +search-status-svg.footer__button-icon-svg
+                            .footer__button-text
+                                |Отслеживание грузов
+                            .footer__button-arrow
+                                +footer-arrow-svg 
+            .footer__row.footer__row--mobile
+                .footer__col.footer__contact-links
+                    //-Сделать разделение на 2 блока, блок с медиа и блок с политикой
+                    .footer-mid-col-media 
+                        .footer__col-phone-link.footer-text-link
+                            a.footer-link.footer-phone-link(href="tel:74959959591") +7 495 995-95-91
+                        .footer__col-mail-link.footer-text-link
+                            a.footer-link.footer-mail-link(href="mailto:utlc@utlc.com") utlc@utlc.com 
+                        .footer__col-media-links
+                            a.footer__col-media-links_tg(href="#")
+                                +footer-tg-svg
+                            a.footer__col-media-links_dzen(href="#")
+                                +footer-dzen-link
+                            a.footer__col-media-links_chat(href="#")
+                                +footer-chat-link 
+            .footer__row.footer__row--mobile
+                .footer__col.footer__page-links
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 О компании
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Органы управления и контроля
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Реестродержатель
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Документы
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Дипломы и сертификаты
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 Закупки
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Календарь мероприятий
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") План закупок
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Личный кабинет поставщика
+            .footer__row.footer__row--mobile
+                .footer__col.footer__page-links
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 Корпоративная социальная ответственность
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Экология
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Благотворительность
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") UTLC CUP
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Карьера
+                    .list.footer__col-list
+                        .footer__col-list-title 
+                            h2 One million club
+                        ul.footer__page-list 
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Календарь событий
+                            li.footer__col-list-item
+                                a.footer__col-list-link(href="#") Отраслевые новости
+                    
+            .footer__row.footer__row--mobile-politics
+                .footer__page-links-politics
+                        a.footer__page-links-item(href="#") Пресс-центр
+                        a.footer__page-links-item(href="#") ERAI
+                .footer__page-links-politics.footer-politics-link-mg
+                        a.footer__page-links-item(href="#") Контакты
+                        a.footer__page-links-item(href="#") Часто задавые вопросы
+            .footer__row
+                .footer__politics
+                        .footer__polotics-list 
+                            a.footer__politics-item(href="#") Политика в отношении обработки персональных данных
+                            a.footer__politics-item(href="#") Политика по КСО
+            .footer__row.footer-bot-row
+                .footer-bot-row__col 
+                    .partners-row
+                        .partners-row__col
+                            img(src="assets/images/footer-partner-3.png", alt="Лого партнера компании")
+                        .partners-row__col
+                            img(src="assets/images/footer-partner-2.png", alt="Лого партнера компании")
+                        .partners-row__col 
+                            img(src="assets/images/footer-partner-1.png", alt="Лого партнера компании")
+                .footer-bot-row__col 
+                    .company |© АО «ОТЛК ЕРА», 2023
+                .footer-bot-row__col
+                    .copyright.copyright--big
+                        a.copyright__link(href="#") Сделано в 
+                            span.copyryght__link_green CloudMill

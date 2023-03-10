@@ -1,0 +1,18 @@
+mixin pag-slider    
+    section.pag-slider 
+        .container 
+            .pag-slider__wrapper 
+                .pag-slider__item.pag-slide
+                    .pag-slide__row
+                        .pag-slide__col 
+                            .pag-slide__img
+                                +picture(src = 'speed')
+                        .pag-slide__col.pag-slide__main 
+                            .pag-slide__text 
+                                .pag-slide__text-title скорость
+                                .pag-slide__text-subtitle  5-7 дней от границы КНР до границы Европы. <br> В 3-5 раз быстрее доставки по морю.
+                            .slider-buttons.slider-buttons--big.slider__buttons-arrow.slider__buttons-arrow--pag
+                                .slider-buttons__item.left-slide
+                                    +slider-arrow-svg.arrow-svg.arrow-svg--left
+                                .slider-buttons__item.right-slide
+                                    +slider-arrow-svg.arrow-svg.arrow-svg--right   

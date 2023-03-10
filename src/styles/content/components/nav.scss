@@ -1,0 +1,13 @@
+.nav{
+    &__list{
+        display: flex;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 130%;
+        gap: 32px;
+        &-link{
+            color: #181D1D;
+            text-decoration: none;
+        }
+    }
+}

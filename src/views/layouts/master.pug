@@ -1,0 +1,40 @@
+-
+  var test = 'test'
+
+block variables
+
+include ../components/svg
+include ../components/header
+include ../components/footer
+include ../components/grid-test
+include ../components/card
+include ../components/modal
+include ../components/file-card
+include ../components/picture
+include ../components/slider
+include ../components/pag-slider
+
+doctype html
+
+html(lang='ru')
+  
+  head
+    meta(charset="utf-8")
+    title= data.test
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  
+  body.body
+    
+    .wrapper
+      block header
+        +header
+
+      main.main
+        block content
+
+      +grid-test 
+
+      block footer
+        +footer
+
+    block scripts

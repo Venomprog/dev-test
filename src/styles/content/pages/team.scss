@@ -1,0 +1,47 @@
+.team{
+    &__img{
+        position: relative;
+
+        width: rem(435px);
+        height: rem(480px);
+
+        &-button{
+            position: absolute;
+            bottom: rem(20px);
+            right: rem(20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            width: rem(58px);
+            height: rem(58px);
+            
+            background: #006525;
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            cursor: pointer;
+
+            svg{
+                width: rem(20px);
+                height: rem(20px);
+            }
+        }
+    }
+    &__title{
+        margin-top: rem(20px);
+
+        font-weight: 700;
+        font-size: rem(28px);
+        line-height: 130%;
+        letter-spacing: -0.01em;
+        color: #181D1D;
+    }
+    &__subtitle{
+        margin-top: rem(8px);
+
+
+        font-weight: 500;
+        font-size: rem(16px);
+        line-height: 130%;
+        color: rgba(6, 8, 8, 0.5);
+    }
+}

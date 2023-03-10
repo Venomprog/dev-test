@@ -1,0 +1,17 @@
+.burger{
+    &__line{
+        display: block;
+        width: 36px;
+        height: 0px;
+        border: 1px solid #FFFFFF;
+        &:nth-child(2){
+            margin-top: 10px;
+            @media (max-width: ($breakpoint - 1px)) {
+                margin-top: 6px;
+            }
+        }
+        @media (max-width: ($breakpoint - 1px)){
+            width: 28px;
+        }
+    }
+}

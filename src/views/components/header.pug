@@ -1,0 +1,68 @@
+mixin header
+    .container.header--desktop
+        header.header
+            .list.header__list-lang
+                .header__btn
+                    ul.list-items.list__lang
+                        li.list-items__item.header-link_arrow
+                            a.list-items__item_lang(href="#") RU
+                                +arrow-svg 
+            .logo.header__logo
+                .logo__header
+                    +logo-svg
+            .menu.header__menu
+                .menu__wrapper
+                    .menu__text
+                        |МЕНЮ
+                    .burger.menu__burger
+                        span.burger__line 
+                        span.burger__line.burger__line-mg-top
+            .search.header__search
+                .header__btn
+                    .search__img 
+                        +search-logo-svg 
+            nav.nav.header__nav
+                ul.list-items.nav__list 
+                    li.list-items__item
+                        a.nav__list-link(href="#") Услуги
+                    li.list-items__item
+                        a.nav__list-link(href="#") Карта маршрутов
+                    li.list-items__item
+                        a.nav__list-link(href="#") Отслеживание грузов
+            .phone.header__phone
+                a.phone__link(href="#") +7 495 995-95-91
+            .header__mail-user--row 
+                .header__mail.header__btn 
+                    .mail__img
+                        +mail-logo-svg
+                .user.header__btn.header__user 
+                    .user__name.header-link_arrow
+                        p A.
+                        +arrow-svg 
+    .container.header--mobile
+        header.header
+            .header__row 
+                .header__col 
+                    .logo.header__logo
+                        .logo__header
+                            +logo-svg
+                    
+                    
+                .header__col
+                    .header__col-btns
+                        .search.header__search.header__btn
+                                .search__img 
+                                    +search-logo-svg 
+                        .header__phone.header__btn 
+                                .phone__img
+                                    +phone-call-svg
+                        .header__mail.header__btn 
+                                .mail__img
+                                    +mail-logo-svg
+                    .menu.header__menu
+                        .menu__wrapper
+                            .menu__text
+                                |МЕНЮ
+                            .burger.menu__burger
+                                span.burger__line 
+                                span.burger__line.burger__line-mg-top

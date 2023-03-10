@@ -1,0 +1,18 @@
+mixin modal
+    .container.container__modal 
+        section.contact-page__modal 
+            .modal.contact-page__modal-wrapper
+                .contact-page__modal--close-btn
+                    +close-modal-btn
+                .contact-page__modal-title.modal--title Задать вопрос <br> по процедуре
+                form.form.contact-page__modal-form
+                    input.form__input(type="text" placeholder="ФИО")
+                    textarea.form__input.form__textarea#form(name="text", cols="30", rows="10" placeholder="Текст вопроса")
+                    label.form__checkbox
+                        input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="person")
+                        .form__checkbox-box
+                            +checkbox-mark
+                        .form__checkbox-text Согласие с политикой в отношении 
+                            a.form__checkbox-text--link(href="#") обработки персональных данных
+                    .form__button 
+                        button.form__button-submit(type="submit") Отправить 

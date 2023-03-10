@@ -1,0 +1,43 @@
+*{
+  box-sizing: border-box;
+}
+*{
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  // font-size: calc(100px / 19.2px * 1vw);
+  @media (min-width: 320px) {
+    font-size: getVw($fs, 340px / 100);
+  }
+  @each $breakpoint in (375px, 576px, 768px, 1024px) {
+    @media (min-width: #{$breakpoint}) {
+      font-size: getVw($fs, $breakpoint / 100);
+    }
+  }
+  @media (min-width: 1280px) {
+    font-size: getVw($fs, 1920px / 100);
+  }
+  @media (min-width: 1920px) {
+    font-size: getVw($fs, 1920px / 100);
+  }
+}
+body{
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px;
+  background-color: white;
+}
+.container{
+  padding: 0 calc(#{$col-pad-d});
+  @media (max-width: ($breakpoint - 1px)) {
+    padding: 0 calc(#{$col-pad-m});
+  }
+  // max-width: 1800px;
+  // margin: 0 auto;
+}
+
+
+.container-fluid{
+  background: #181D1D;
+}

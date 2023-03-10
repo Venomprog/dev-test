@@ -1,0 +1,22 @@
+$fs: 16px;
+
+// grid columns
+$col-count-m: 4;
+$col-count-t: 8;
+$col-count-d: 12;
+
+$col-pad-m: 20px;
+$col-pad-d: 60px;
+
+$col-gap-d: 20px;
+$col-gap-m: 10px;
+
+$col-width-m: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-m - 1})) / #{$col-count-m})';
+$col-width-t: '((100vw - (#{$col-pad-m} * 2) - (#{$col-gap-m} * #{$col-count-t - 1})) / #{$col-count-t})';
+$col-width-d: '((100vw - (#{$col-pad-d} * 2) - (#{$col-gap-d} * #{$col-count-d - 1})) / #{$col-count-d})';
+
+$col-part-m: '(#{$col-width-m} + #{$col-gap-m})';
+$col-part-t: '(#{$col-width-t} + #{$col-gap-m})';
+$col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
+
+$breakpoint: 1280px;
