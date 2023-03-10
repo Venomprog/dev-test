@@ -2,6 +2,9 @@
     
     &__card{
         padding-bottom: 100px;
+        &-col{
+            width: calc(#{$col-part-d}  * 3 - #{$col-gap-d});
+        }
         &-row{
             display: grid;
             grid-template-columns: repeat(4,1fr);

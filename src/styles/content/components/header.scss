@@ -122,13 +122,16 @@
         }
     }
     &__nav{
-        width: calc(#{$col-part-d} * 5 - #{$col-gap-d});
+        width: calc(#{$col-part-d} * 4);
         flex-shrink: 0;
     }
     &__phone{
         display: flex;
         align-items: center;
-        width: calc(#{$col-part-d} * 1 );
+        width: calc(#{$col-part-d} * 2 );
+        a{
+            text-decoration: none;
+        }
         @media (max-width: ($breakpoint - 1px)){
             width: 32px;
             height: 32px;
