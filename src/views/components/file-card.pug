@@ -1,8 +1,26 @@
 mixin file-card 
     .container 
         section.contact-page__file
-            .contact-page__file-wrapper
+            .contact-page__file-row 
+                .file-card__buttons 
+                    .file-card__buttons-item.documentation.active(data-document="") Сопроводительная документация
+                    .file-card__buttons-item.protocols(data-protocol="") Протоколы
+            .contact-page__file-wrapper.contact-page__file-wrapper-document
                 - for (i = 0; i < 6; i++)
+                    .contact-page__file-inner
+                        .contact-page__file-inner--container
+                            .contact-page__file-row.contact-page__file-row--top 
+                                .picture.contact-page__file-card.contact-page__file-card--picture
+                                    +file-card-svg.contact-page__file-card--svg
+                                    .contact-page__file-card--svg-text PDF
+                                .contact-page__file-card.contact-page__file-card--top-text 234kb
+                            .contact-page__file-row
+                                .contact-page__file-row-text 
+                                    |Изменения в Положение о Комитете по аудиту <br> (СД № 25 от 10.06.20)
+                            .contact-page__file-inner--container--animate
+                                +card-animate-logo-svg
+            .contact-page__file-wrapper.contact-page__file-wrapper-protocol
+                - for (i = 0; i < 3; i++)
                     .contact-page__file-inner
                         .contact-page__file-inner--container
                             .contact-page__file-row.contact-page__file-row--top 
