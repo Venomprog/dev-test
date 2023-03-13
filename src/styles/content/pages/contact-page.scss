@@ -289,10 +289,10 @@
             align-items: center;
             position: absolute;
             top: 0;
-            right: -64px;
+            right: rem(-64px);
 
-            width: 64px;
-            height: 64px;
+            width: rem(64px);
+            height: rem(64px);
 
             background-color: #181D1D;
             cursor: pointer;
@@ -315,16 +315,35 @@
 
             width: calc(#{$col-part-d} * 4 - #{$col-gap-d} - 60px);
         }
+        
     }
     &__accord{
         margin-top: rem(200px);
         margin-bottom: 200px;
     }
+    &-modal__row{
+        display: none;
+        width: calc(#{$col-part-d} * 4 - #{$col-gap-d} - 60px);
+        
+        .form-button{
+            margin-top: rem(32px);
+        }
+    }
+    
 }
 
 
 
-
+.contact-page__row--form{
+    &.none-visible{
+        display: none;
+    }
+}
+.contact-page__row--submit{
+    &.visible{
+        display: block;
+    }
+}
 
 
 .card__animate{

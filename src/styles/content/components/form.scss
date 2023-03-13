@@ -30,7 +30,7 @@
     &__checkbox{
         display: flex;
         align-items: center;
-        margin-top: 20px;
+        margin-top: rem(20px);
         position: relative;
 
         cursor: pointer;
@@ -38,7 +38,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            margin-right: 12px;
+            margin-right: rem(12px);
 
             width: rem(24px);
             height: rem(24px);
@@ -51,7 +51,7 @@
         }
         &-text{
             font-weight: 500;
-            font-size: 12px;
+            font-size: rem(12px);
             line-height: 130%;
             a{
                 font-weight: 700;
@@ -73,23 +73,25 @@
     
     }
     &__button{
-        margin-top: 20px;
+        margin-top: rem(20px);
         width: 100%;
-        &-submit{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 22px 222px;
-
-            width: 100%;
-
-            cursor: pointer;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 130%;
-            background: #006525;
-            color: white;
-            border: none;
-        }
+        
     }
+    
+}
+.form-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 22px 222px;
+
+    width: 100%;
+
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 130%;
+    background: #006525;
+    color: white;
+    border: none;
 }

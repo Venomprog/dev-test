@@ -4,3 +4,4 @@ import "./scripts/test";
 
 import "./scripts/accordion";
 import "./scripts/select";
+import "./scripts/form";
