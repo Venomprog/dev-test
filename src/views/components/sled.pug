@@ -4,7 +4,7 @@ mixin sled
             .sled__wrapper 
                 .sled__row 
                     .title.sled__title Углеродный след CO <sub> 2 </sub>  за 2022 год
-                .sled__row 
+                .sled__row.sled__row-main
                     .sled__bg 
                         .sled-img.sled-img--tree
                             +picture(src = 'tree')
@@ -12,21 +12,21 @@ mixin sled
                             +picture(src = 'circle')
                     .transportation.transportation--absolute.train
                         .transportation-img
-                            +train-svg
+                            +train-svg.train
                         .transportation-text 
                             .transportation-title Железнодорожные перевозки
                             .transportation-number 33 400
                             .transportation-subtext тонн
                     .transportation.transportation--absolute.boat
                         .transportation-img
-                            +boat-svg
+                            +boat-svg.boat
                         .transportation-text 
                             .transportation-title Морские перевозки
                             .transportation-number 159 400
                             .transportation-subtext тонн
                     .transportation.transportation--absolute.trailer
                         .transportation-img
-                            +trailer-svg.big
+                            +trailer-svg.trailer
                         .transportation-text 
                             .transportation-title автомобильные перевозки
                             .transportation-number 2 970 600
@@ -38,3 +38,4 @@ mixin sled
                             .transportation-title авиа перевозки
                             .transportation-number 17 622 300
                             .transportation-subtext тонн
+                

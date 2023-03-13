@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         modalWrapper.classList.toggle('none-visible');
         modalSubBlock.classList.toggle('visible');
-        console.log('done')
+        modalForm.reset()
     });
 
     

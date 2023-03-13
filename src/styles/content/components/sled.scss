@@ -4,8 +4,9 @@
 
 
     background: #F4F4F4;
-    &__wrapper{
-
+    
+    @media (max-width: ($breakpoint-m - 1px) ){
+        height: 622px;
     }
     &__title{
         font-weight: 700;
@@ -17,16 +18,41 @@
         sub{
             font-size: rem(30px);
         }
+
+        @media (max-width: ($breakpoint - 1px)) {
+            font-size: rem(18px);
+            sub{
+                font-size: rem(12px);
+                margin-left: rem(-3px);
+            }
+        }
     }
     &__row{
         position: relative;
+        &-main{
+            margin-top: rem(120px);
+
+            @media (max-width: ($breakpoint-m - 1px) ){
+                height: 572px;
+            }
+        }
     }
     &__bg{
         width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
         position: relative;
+
+        @media (max-width: ($breakpoint - 1px)){
+            width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+        }
+        @media (max-width: ($breakpoint-m - 1px) ) {
+            width: 597px;
+            transform: rotate(90deg);
+            position: absolute;
+            left: -30%;
+        }
     }
     &-img{
-
+        
         
         &--circle{
             position: absolute;

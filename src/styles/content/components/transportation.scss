@@ -38,6 +38,44 @@
             top: rem(270px);
             left: rem(1500px);
         }
+
+        @media (max-width: ($breakpoint - 1px)){
+            &.train{
+                top: -39%;
+                left: 15%;
+            }
+            &.boat{
+                top: -14%;
+                left: 7%;
+            }
+            &.trailer{
+                top: 13%;
+                left: 0%;
+            }
+            &.plane{
+                top: -14%;
+                left: 60%;
+            }
+        }
+
+        @media (max-width: ($breakpoint-m - 1px) ){
+            &.train{
+                top: 10%;
+                left: 55%;
+            }
+            &.boat{
+                top: -10%;
+                left: 50%;
+            }
+            &.trailer{
+                top: -20%;
+                left: 0%;
+            }
+            &.plane{
+                top: 50%;
+                left: 55%;
+            }
+        }
     }
     &-img{
         display: flex;
@@ -50,6 +88,11 @@
         border-radius: rem(8px);
         width: rem(48px);
         height: rem(48px);
+
+        @media (max-width: ($breakpoint - 1px)){
+            width: rem(28px);
+            height: rem(28px);
+        }
         svg{
             width: rem(29px);
             height: rem(29px);
@@ -67,13 +110,32 @@
                 stroke: #006525;
             }
         }
-        .big{
+        .trailer{
             width: rem(33px);
             height: rem(17px);
         }
-        .big{
+        .plane{
             width: rem(30px);
             height: rem(30px);
+        }
+
+        @media (max-width: ($breakpoint - 1px)){
+            .train{
+                width: rem(20px);
+                height: rem(20px);
+            }
+            .boat{
+                width: rem(16px);
+                height: rem(11px);
+            }
+            .trailer{
+                width: rem(20px);
+                height: rem(10px);
+            }
+            .plane{
+                width: rem(20px);
+                height: rem(17px);
+            }
         }
     }
     &-title{
@@ -85,6 +147,10 @@
         color: #181D1D;
         margin-bottom: rem(6px);
 
+        @media (max-width: ($breakpoint - 1px)) {
+            font-size: rem(7px);
+            line-height: 110%;
+        }
     }
     &-number{
         font-weight: 700;
@@ -93,11 +159,23 @@
         letter-spacing: -0.02em;
         text-transform: uppercase;
         color: #045C25;
+
+        @media (max-width: ($breakpoint - 1px)) {
+            font-size: rem(20px);
+            line-height: 110%;
+        }
+        
     }
     &-subtext{
         font-weight: 500;
         font-size: rem(12px);
         line-height: 130%;
         color: #006525;
+
+        @media (max-width: ($breakpoint - 1px)) {
+            font-size: rem(10px);
+            line-height: 130%;
+        }
+        
     }
 }
