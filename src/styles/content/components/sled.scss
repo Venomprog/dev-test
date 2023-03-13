@@ -11,9 +11,15 @@
         font-weight: 700;
         font-size: rem(46px);
         line-height: 120%;
-        letter-spacing: -0.02em;
         text-transform: uppercase;
         color: #181D1D;
+
+        sub{
+            font-size: rem(30px);
+        }
+    }
+    &__row{
+        position: relative;
     }
     &__bg{
         width: calc(#{$col-part-d} * 12 - #{$col-gap-d});

@@ -1,0 +1,103 @@
+.transportation{
+    &:hover{
+        .transportation-img{
+            background: #006525;
+            svg{
+                line{
+                    stroke: white;
+                }
+                rect{
+                    stroke: #FFFFFF;
+                }
+                circle{
+                    stroke: #FFFFFF;
+                }
+                path{
+                    stroke: #FFFFFF;
+                }
+            }
+        }
+    }
+    &--absolute{
+        position: absolute;
+        display: flex;
+        gap: rem(12px);
+        &.train{
+            top: rem(76px);
+            left: rem(352px);
+        }
+        &.boat{
+            top: rem(280px);
+            left: rem(119px);
+        }
+        &.trailer{
+            top: rem(400px);
+            left: rem(119px);
+        }
+        &.plane{
+            top: rem(270px);
+            left: rem(1500px);
+        }
+    }
+    &-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+
+        transition: 0.5s;
+        background: #FFFFFF;
+        border-radius: rem(8px);
+        width: rem(48px);
+        height: rem(48px);
+        svg{
+            width: rem(29px);
+            height: rem(29px);
+            
+            line{
+                stroke: #006525;
+            }
+            rect{
+                stroke: #006525;
+            }
+            circle{
+                stroke: #006525;
+            }
+            path{
+                stroke: #006525;
+            }
+        }
+        .big{
+            width: rem(33px);
+            height: rem(17px);
+        }
+        .big{
+            width: rem(30px);
+            height: rem(30px);
+        }
+    }
+    &-title{
+        font-weight: 700;
+        font-size: rem(10px);
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #181D1D;
+        margin-bottom: rem(6px);
+
+    }
+    &-number{
+        font-weight: 700;
+        font-size: rem(34px);
+        line-height: 110%;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        color: #045C25;
+    }
+    &-subtext{
+        font-weight: 500;
+        font-size: rem(12px);
+        line-height: 130%;
+        color: #006525;
+    }
+}
