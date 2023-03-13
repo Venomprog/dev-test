@@ -1,4 +1,5 @@
 .transportation{
+    z-index: 2;
     &:hover{
         .transportation-img{
             background: #006525;
@@ -61,11 +62,11 @@
         @media (max-width: ($breakpoint-m - 1px) ){
             &.train{
                 top: 10%;
-                left: 55%;
+                left: 65%;
             }
             &.boat{
-                top: -10%;
-                left: 50%;
+                top: -5%;
+                left: 40%;
             }
             &.trailer{
                 top: -20%;
