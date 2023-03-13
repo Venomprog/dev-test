@@ -42,20 +42,20 @@
 
         @media (max-width: ($breakpoint - 1px)){
             &.train{
-                top: -39%;
-                left: 15%;
+                top: 5%;
+                left: 25%;
             }
             &.boat{
-                top: -14%;
-                left: 7%;
+                top: 22%;
+                left: 10%;
             }
             &.trailer{
-                top: 13%;
-                left: 0%;
+                top: 38%;
+                left: 5%;
             }
             &.plane{
-                top: -14%;
-                left: 60%;
+                top: 22%;
+                left: 70%;
             }
         }
 
@@ -73,7 +73,7 @@
                 left: 0%;
             }
             &.plane{
-                top: 50%;
+                top: 35%;
                 left: 55%;
             }
         }
