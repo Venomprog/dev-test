@@ -1,8 +1,86 @@
 mixin slider 
     .container 
-        section.slider 
+        section.slider.slider-history
             .title.slider__title Наша история
-            .slider__wrapper 
+            .slider__wrapper
+                .slider__wrapper-col
+                    .slider__buttons.slider-row.swiper.swiper-thumbs
+                        .buttons-date.slider__buttons-date.swiper-wrapper
+                            .button.buttons-date__item.swiper-slide 2015
+                            .button.buttons-date__item.swiper-slide 2016
+                            .button.buttons-date__item.swiper-slide 2017
+                            .button.buttons-date__item.swiper-slide 2018
+                            .button.buttons-date__item.swiper-slide 2019
+                            .button.buttons-date__item.swiper-slide 2020
+                            .button.buttons-date__item.swiper-slide 2021
+                            .button.buttons-date__item.swiper-slide 2022
+                    .slider-buttons.slider__buttons-arrow
+                        .slider-buttons__item.left-slide
+                            +slider-arrow-svg.arrow-svg.arrow-svg--left
+                        .slider-buttons__item.right-slide
+                            +slider-arrow-svg.arrow-svg.arrow-svg--right
+                .swiper.slider__wrapper--history
+                    .swiper-wrapper
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2015
+                                    .slide__text 
+                                        p Период активной деятельности нашего совместного предприятия как отдельной и независимой бизнес-единицы на рынке перевозок контейнеров начался в 2016 году. Это был год, когда акционерами Компании были согласованы и утверждены ключевые  принципы и стратегические направления развития. Несмотря на сложный период  становления базовых регламентов деятельности, нам удалось уже в первый год удвоить объём перевозок по сравнению с 2015 годом и нарастить хорошую клиентскую базу для последующих периодов.
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2016
+                                    .slide__text 
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2017
+                                    .slide__text 
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2018
+                                    .slide__text 
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2019
+                                    .slide__text 
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2020
+                                    .slide__text 
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2021
+                                    .slide__text 
+                        .slider-row.slide.swiper-slide
+                            .slide__content
+                                .slide__content-img
+                                    +picture(src = 'train')
+                                .slide__content-text
+                                    .slide__title 2022
+                                    .slide__text 
+        section.slider.slider-history
+            .title.slider__title Наша история
+            .slider__wrapper.swiper 
                 .slider__buttons.slider-row
                     .buttons-date.slider__buttons-date  
                         .button.buttons-date__item 2015
@@ -18,11 +96,45 @@ mixin slider
                             +slider-arrow-svg.arrow-svg.arrow-svg--left
                         .slider-buttons__item.right-slide
                             +slider-arrow-svg.arrow-svg.arrow-svg--right
-                .slider-row.slide
-                    .slide__content
-                        .slide__content-img
+                .swiper-wrapper
+                    .slider-row.slide.swiper-slide
+                        .slide__content
+                            .slide__content-img
+                                +picture(src = 'train')
+                            .slide__content-text
+                                .slide__title 2017
+                                .slide__text Период активной деятельности нашего совместного предприятия как отдельной и независимой бизнес-единицы на рынке перевозок контейнеров начался в 2016 году. Это был год, когда акционерами Компании были согласованы и утверждены ключевые  принципы и стратегические направления развития. Несмотря на сложный период  становления базовых регламентов деятельности, нам удалось уже в первый год удвоить объём перевозок по сравнению с 2015 годом и нарастить хорошую клиентскую базу для последующих периодов.
+    section.slider.slider-was
+        .slider__wrapper.swiper.swiper--was
+            .slider__buttons.slider-row.container
+                .title.slider__title Как это было
+                .slider-buttons.slider__buttons-arrow
+                    .slider-buttons__item.left-slide
+                        +slider-arrow-svg.arrow-svg.arrow-svg--left
+                    .slider-buttons__item.right-slide
+                        +slider-arrow-svg.arrow-svg.arrow-svg--right
+            .swiper-wrapper
+                .slider-row--was.swiper-slide.slider-row--was
+                    .slide__inner
+                        .slide__inner-img
                             +picture(src = 'train')
-                        .slide__content-text
-                            .slide__title 2017
-                            .slide__text Период активной деятельности нашего совместного предприятия как отдельной и независимой бизнес-единицы на рынке перевозок контейнеров начался в 2016 году. Это был год, когда акционерами Компании были согласованы и утверждены ключевые  принципы и стратегические направления развития. Несмотря на сложный период  становления базовых регламентов деятельности, нам удалось уже в первый год удвоить объём перевозок по сравнению с 2015 годом и нарастить хорошую клиентскую базу для последующих периодов.
-                    
+                .slider-row--was.swiper-slide
+                    .slide__inner
+                        .slide__inner-img
+                            +picture(src = 'tree')
+                .slider-row--was.swiper-slide
+                    .slide__inner
+                        .slide__inner-img
+                            +picture(src = 'tree')
+                .slider-row--was.swiper-slide.slider-row--was
+                    .slide__inner
+                        .slide__inner-img
+                            +picture(src = 'tree')
+                .slider-row--was.swiper-slide
+                    .slide__inner
+                        .slide__inner-img
+                            +picture(src = 'train')
+                .slider-row--was.swiper-slide
+                    .slide__inner
+                        .slide__inner-img
+                            +picture(src = 'tree')

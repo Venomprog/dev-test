@@ -4,8 +4,8 @@
         display: flex;
         align-items: center;
         gap: rem(8px);
-
-        width: calc(#{$col-part-d} * 11 );
+        width: auto;
+        // width: calc(#{$col-part-d} * 11 );
 
         @media (max-width: ($breakpoint - 1 px)){
             
@@ -23,11 +23,13 @@
             background: rgba(0, 0, 0, 0.06);
             border-radius: rem(58px);
             cursor: pointer;
-
-            &.active{
-                background: #006525;
-                color: white;
-            }
+            width: rem(96px);
+            
+            
+        }
+        .swiper-slide-active{
+            background: #006525;
+            color: white;
         }
     }
 }

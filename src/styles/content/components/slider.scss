@@ -24,7 +24,10 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        &--was{
+            width: rem(890px);
+            height: rem(520px);
+        }
     }
     
     &__buttons{
@@ -45,29 +48,56 @@
                 @include scrollbar-hidden;
             }
             
+            
         }
         &-arrow{
             $comp: &;
             display: flex;
             gap: rem(8px);
-
+            
             @media (max-width: ($breakpoint - 1px)) {
                 display: none;
                 &--pag{
-                    display: flex;
+                    
+                    display: none;
+                    &.mobile{
+                        display: block;
+                    }
                 }
             }
             &--pag{
                 gap: rem(23px);
-                justify-content: flex-end;
+                display: flex;
+                align-items: end;
+                margin-left: rem(301px);
                 @media (max-width: ($breakpoint - 1px)){
                     gap: rem(4px);
+                    margin-left: 0px;
+                    justify-content: space-between;
                 }
             }
             
 
         }
     }
+    &-buttons__col{
+        &--arrows{
+            display: flex;
+            gap: rem(23px);
+        }
+        &--bullet{
+            height: 100%;
+            display: flex;
+            align-items: end;
+            margin-left: rem(353px);
+            @media (max-width: ($breakpoint - 1px)) {
+                margin-left: 0px;
+                order: -1;
+                
+            }
+        }
+    }
+
 }
 
 .slider-buttons{
@@ -125,4 +155,9 @@
             }
         }
     }
+}
+
+
+.slider__wrapper-col{
+    display: flex;
 }

@@ -4,15 +4,39 @@ mixin pag-slider
             .pag-slider__wrapper 
                 .pag-slider__item.pag-slide
                     .pag-slide__row
-                        .pag-slide__col 
-                            .pag-slide__img
-                                +picture(src = 'speed')
-                        .pag-slide__col.pag-slide__main 
-                            .pag-slide__text 
-                                .pag-slide__text-title скорость
-                                .pag-slide__text-subtitle  5-7 дней от границы КНР до границы Европы. <br> В 3-5 раз быстрее доставки по морю.
+                        .pag-slide__col.pag-slide__col--img
+                            .swiper.swiper-pag
+                                .pag-slide__col.swiper-wrapper.swiper-wrapper--pag 
+                                    .pag-slide__img.swiper-slide
+                                        +picture(src = 'speed')
+                                    .pag-slide__img.swiper-slide
+                                        +picture(src = 'speed')
+                                    .pag-slide__img.swiper-slide
+                                        +picture(src = 'speed')
+                        .pag-slide__col.pag-slide__col--main
+                            .swiper.swiper-pag-text
+                                .swiper-wrapper.swiper-wrapper-text
+                                    .pag-slide__text.swiper-slide
+                                        .pag-slide__text-title 
+                                            span.swiper--title скорость
+                                        .pag-slide__text-subtitle  5-7 дней от границы КНР до границы Европы. <br> В 3-5 раз быстрее доставки по морю.
+                                    .pag-slide__text.swiper-slide
+                                        .pag-slide__text-title 
+                                            span.swiper--title скорость
+                                        .pag-slide__text-subtitle  5-7 дней от границы КНР до границы Европы. <br> В 3-5 раз быстрее доставки по морю.
+                                    .pag-slide__text.swiper-slide
+                                        .pag-slide__text-title 
+                                            span.swiper--title скорость
+                                        .pag-slide__text-subtitle  5-7 дней от границы КНР до границы Европы. <br> В 3-5 раз быстрее доставки по морю.
                             .slider-buttons.slider-buttons--big.slider__buttons-arrow.slider__buttons-arrow--pag
-                                .slider-buttons__item.left-slide
-                                    +slider-arrow-svg.arrow-svg.arrow-svg--left
-                                .slider-buttons__item.right-slide
-                                    +slider-arrow-svg.arrow-svg.arrow-svg--right   
+                                .slider-buttons__col.slider-buttons__col--arrows
+                                    .slider-buttons__item.left-slide-pag
+                                        +slider-arrow-svg.arrow-svg.arrow-svg--left
+                                    .slider-buttons__item.right-slide-pag
+                                        +slider-arrow-svg.arrow-svg.arrow-svg--right   
+                                .slider-buttons__col.slider-buttons__col--bullet
+                                    .swiper-pagination.swiper-pagination--custom 
+                                        .swiper-pagination-bullet.swiper-pagination-bullet-active
+                                        .swiper-pagination-bullet
+                                        .swiper-pagination-bullet
+                            

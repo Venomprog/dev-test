@@ -1,0 +1,110 @@
+.swiper{
+    &-thumbs{
+        width: calc(#{$col-part-d} * 11 - #{$col-gap-d});
+    }
+    &-pag{
+        width: rem(890px);
+        height: rem(740px);
+        @media (max-width: ($breakpoint - 1px)) {
+            width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+            height: auto;
+        }
+    }
+   &-pag-text{
+    width: rem(910px);
+    margin-left: 0px;
+    @media (max-width: ($breakpoint - 1px)){
+        width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+            height: auto;
+    }
+   }
+    &-pagination{
+        &--custom{
+            display: flex;
+            gap: rem(20px);
+            align-items: flex-end;
+            position: static;
+        }
+        &-bullet{
+            display: inline-block;
+            width: 2px;
+            height: rem(34px);
+            opacity: 0.3;
+            
+            background-color: #FFFFFF;
+            transition: 0.5s;
+            border-radius: 0px;
+            &-active{
+                
+                height: rem(89px);
+
+                
+                opacity: 1;
+
+                /* Inside auto layout */
+
+                
+            }
+
+            @media (max-width: ($breakpoint - 1px)) {
+                height: rem(20px);
+                &-active{
+                    height: rem(48px);
+                }
+                    
+                }
+            
+        }
+            
+    }
+}
+
+
+.swiper-slide-next{
+        
+    .pag-slide__text-title{
+        overflow: hidden;
+        .swiper--title{
+            transform: translateY(100%);
+            transition: transform 0.5s;
+            
+        }
+    } 
+    
+}
+.swiper-slide-prev{
+    
+    .pag-slide__text-title{
+        
+        .swiper--title{
+            transform: translateY(-100%);
+            transition: transform 0.5s;
+            
+        }
+    }
+    
+}
+.swiper-slide-active{
+    .swiper--title{
+        transform: none;
+        transition-delay: 0.5s;
+    }
+    .pag-slide__text-subtitle{
+        opacity: 1;
+        transition: 0.5s;
+        transition-delay: 0.5s;
+    }
+}
+.swiper--title{
+    transition: transform 0.5s;
+    display: inline-block;
+}
+
+.swiper-wrapper-text{
+    transition-delay: 0.5s;
+
+    @media (max-width: ($breakpoint - 1px)) {
+        width: calc(#{$col-part-m} * 4 - #{$col-gap-m});
+            height: auto;
+    }
+}
