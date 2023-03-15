@@ -1,0 +1,26 @@
+.fancybox{
+    &-slide{
+        text-align: left;
+        
+    }
+    &-toolbar{
+        left: rem(652px);
+        display: none;
+        @media (max-width: ($breakpoint - 1px)){
+            left: rem(335px);
+            top: rem(25px);
+        }
+    }
+    &-button {
+        background: rgba($color: #181D1D, $alpha: 1.0);
+    }
+    &-content{
+        overflow: visible;
+        @media (max-width: ($breakpoint - 1px)) {
+            width: 100%;
+        }
+    }
+    &-container{
+        height: 100vh;
+    }
+}

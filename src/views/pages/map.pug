@@ -1,0 +1,13 @@
+extends ../layouts/master
+
+
+
+block content
+    .container 
+        section.map 
+            #map
+            <input type="button" id="destroyButton" value="Удалить карту"/>
+    
+
+block scripts
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=7376ce96-80a1-4831-8268-2894a23cf5b4&lang=ru_RU" type="text/javascript")

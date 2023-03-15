@@ -8,5 +8,8 @@ import "./scripts/form";
 import "./scripts/file-cards";
 import "./scripts/file-tabs";
 import "./scripts/swiper";
+import "./scripts/modal";
+import "./scripts/scroll";
+import "./scripts/map";
 
 

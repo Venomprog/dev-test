@@ -1,8 +1,8 @@
 mixin modal
-    .container.container__modal 
+    .container.container__modal
         section.contact-page__modal 
             .modal.contact-page__modal-wrapper
-                .contact-page__modal--close-btn
+                .contact-page__modal--close-btn(data-fancybox-close="")
                     +close-modal-btn
                 .contact-page__row.contact-page__row--form(data-modal="")
                     .contact-page__modal-title.modal--title Задать вопрос <br> по процедуре
@@ -19,4 +19,4 @@ mixin modal
                             button.form-button.form__button-submit(type="submit" data-submit="") Отправить
                 .contact-page-modal__row.contact-page__row--submit(data-modal-visible="") 
                     .contact-page__modal-title.modal--title Вопрос отправлен
-                    button.form-button.form__button--close Закрыть
+                    button.form-button.form__button--close(data-fancybox-close="") Закрыть
