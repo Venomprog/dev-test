@@ -6,7 +6,7 @@ var myMap;
 ymaps.ready(init);
 
 function init () {
-    const coordItems = document.querySelectorAll('.coord-item');
+    const coordItems = document.querySelectorAll('.marks-list__item');
 
     // Создание экземпляра карты и его привязка к контейнеру с
     // заданным id ("map").
@@ -17,15 +17,18 @@ function init () {
         zoom:10
     });
 
+
+    const clusterer = new ymaps.Clusterer({
+            clusterIconLayout: ymaps.templateLayoutFactory.createClass('<div class="cluster">{{ properties.geoObjects.length }}</div>'),
+            clusterIconShape: {
+            type: 'Rectangle',
+            coordinates: [[0, 0], [50, 50]]
+        },
+    })
+
     BalloonContentLayout = ymaps.templateLayoutFactory.createClass(
-        '<div class="mark-wrapper">'+
-        '<div class="mark-title">RIALTO</div>'+
-        '<div class="mark-street">$[properties.title]</div>'+
-        '<div class="mark-phone">'+
-            '<div class="mark-phone__link"><a href="tel:375296170973">+375 29 617-09-73</a></div>'+
-            '<div class="mark-phone__link"><a href="tel:375296170973">+375 29 617-09-73</a></div>'+
-        '</div>'+
-    '</div>', {
+        '$[properties.balloon]'
+        , {
 
         // Переопределяем функцию build, чтобы при создании макета начинать
         // слушать событие click на кнопке-счетчике.
@@ -43,16 +46,20 @@ function init () {
 
 
 
-    let placemarks = new ymaps.GeoObjectCollection()
+    // let placemarks = new ymaps.GeoObjectCollection()
 
     coordItems.forEach((item) => {
-        const items = item.querySelectorAll('.coord-item__content')
-        const coords = Array.from(items).map(item => +item.textContent)
-        const title = item.querySelector('.coord-item__title')
+        const coords = item.dataset.cord;
+        // const coords = Array.from(items).map(item => +item.textContent)
+        // const title = item.querySelector('.coord-item__title')
+        const balloon = item.innerHTML
+        // '23 32'.split(' ').map(item => Number(item))
+        const corda = coords.split(' ').map(item => +item);
+        // console.log(corda)
         
-        const placemark = new ymaps.Placemark(coords, {
-            // Чтобы балун и хинт открывались на метке, необходимо задать ей определенные свойства.
-            title: title.textContent,
+        const placemark = new ymaps.Placemark(corda, 
+        {
+            balloon
         },
         {
             balloonContentLayout: BalloonContentLayout,
@@ -68,10 +75,10 @@ function init () {
             hideIconOnBalloonOpen: false
         });
 
-        placemarks.add(placemark)
+        clusterer.add(placemark)
     })
 
-    myMap.geoObjects.add(placemarks)
+    myMap.geoObjects.add(clusterer)
 
     document.getElementById('destroyButton').onclick = function () {
         // Для уничтожения используется метод destroy.

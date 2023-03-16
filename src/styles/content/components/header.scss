@@ -1,5 +1,4 @@
 .header{
-    
     &__row{
         display: flex;
         justify-content: space-between;
@@ -55,9 +54,13 @@
     }
     &--mobile{
         display: none;
+        
         @media (max-width: ($breakpoint - 1px)) {         
             display: flex;
-            
+            position: fixed;
+            z-index: 9999;
+            background: #FFFFFF;
+            top: 0;
         }
         
     }

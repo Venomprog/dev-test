@@ -6,3 +6,32 @@
       display: none;
     }
   }
+
+
+  @mixin styled-scrollbar($scrollbar-bg: #EEF1F3, $size: 6px) {
+    scrollbar-track-color: $scrollbar-bg;
+    scrollbar-darkshadow-color: $scrollbar-bg;
+    scrollbar-3dlight-color: $scrollbar-bg;
+    
+    scrollbar-arrow-color: #02343B;
+    
+    scrollbar-highlight-color: #02343B;
+    scrollbar-shadow-color: #02343B;
+    scrollbar-face-color: #02343B;
+  
+    // firefox
+    scrollbar-width: thin;
+    scrollbar-color: #02343B $scrollbar-bg;
+  
+    // chrome, edge, opera, safari
+    &::-webkit-scrollbar {
+      width: $size;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: $scrollbar-bg;
+    }
+    &::-webkit-scrollbar-thumb {
+      // margin: 4px 0;
+      background-color: #02343B;
+    }
+  }
