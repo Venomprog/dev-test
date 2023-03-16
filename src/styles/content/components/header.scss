@@ -1,15 +1,5 @@
 .header{
-    position: relative;
-    z-index: 0;
-    display: flex;
-    font-family: 'Manrope', sans-serif;
-    height: 178px;
-    align-items: center;
-    @media (max-width: ($breakpoint - 1px)){
-        height: 72px;
-        width: calc(#{$col-part-m} * 4);
-        flex-shrink: 0;
-    }
+    
     &__row{
         display: flex;
         justify-content: space-between;
@@ -23,7 +13,6 @@
             display: flex;
             align-items: center;
         }
-       
         &-btns{
             display: flex;
             align-items: center;
@@ -35,6 +24,31 @@
         }
     }
     &--desktop{
+        position: fixed;
+        top: 0;
+        z-index: 9;
+        display: flex;
+        font-family: 'Manrope', sans-serif;
+        height: 178px;
+        align-items: center;
+        background: #FFFFFF;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        border-bottom: 1px solid #E3E3E3;
+        transition: 0.5s;
+        &.scroll{
+            padding-top: 0px;
+            padding-bottom: 0px;
+            height: 118px;
+            .menu__wrapper{
+                top: 0px;
+            }
+        }
+        @media (max-width: ($breakpoint - 1px)){
+            height: 72px;
+            width: calc(#{$col-part-m} * 4);
+            flex-shrink: 0;
+        }
         @media (max-width: ($breakpoint - 1px)) {
             display: none;
         }

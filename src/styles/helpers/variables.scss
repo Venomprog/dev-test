@@ -21,3 +21,6 @@ $col-part-d: '(#{$col-width-d} + #{$col-gap-d})';
 
 $breakpoint-m: 768px;
 $breakpoint: 1280px;
+
+
+$left: '(#{$col-part-d} * 4)'

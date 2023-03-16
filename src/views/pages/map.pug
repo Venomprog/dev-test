@@ -1,0 +1,35 @@
+extends ../layouts/master
+
+
+
+block content
+    .container 
+        section.map 
+            #map
+            <input type="button" id="destroyButton" value="Удалить карту"/>
+            ul.coord-list 
+                li.coord-item 
+                    .coord-item__content 55.69289651935801 
+                    .coord-item__content 37.734255932588425
+                    .coord-item__title qweweq
+                li.coord-item
+                    .coord-item__content 51.90
+                    .coord-item__content 38.37
+                    .coord-item__title qweweq1
+                li.coord-item
+                    .coord-item__content 51.98
+                    .coord-item__content 38.37
+                    .coord-item__title qweweq2
+            .mark-wrapper 
+                .mark-title RIALTO
+                .mark-street г. Минск, ул. Сурганова 61А, БЦ ЗЕБРА
+                .mark-phone
+                    .mark-phone__link
+                        a(href="tel:375296170973") +375 29 617-09-73
+                    .mark-phone__link
+                        a(href="tel:375296170973") +375 29 617-09-73
+
+    
+
+block scripts
+    script(src="https://api-maps.yandex.ru/2.1/?apikey=7376ce96-80a1-4831-8268-2894a23cf5b4&lang=ru_RU" type="text/javascript")

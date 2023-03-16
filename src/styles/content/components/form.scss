@@ -58,6 +58,10 @@
                 color: #181D1D;
                 text-decoration: none;
             }
+
+            @media (max-width: ($breakpoint - 1px)) {
+                font-size: rem(10px);
+            }
         }
         &-input{
             position: absolute;
@@ -65,6 +69,9 @@
             top: 1000;
 
             visibility: hidden;
+            @media (max-width: ($breakpoint - 1px)) {
+                font-size: rem(14px);
+            }
             &:checked~.form__checkbox-box{
                 border-color: #006525;
                 background-color: #006525;
@@ -83,15 +90,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 22px 222px;
+    padding: rem(22px) 0px;
 
     width: 100%;
 
     cursor: pointer;
     font-weight: 500;
-    font-size: 16px;
+    font-size: rem(16px);
     line-height: 130%;
     background: #006525;
     color: white;
     border: none;
+
+    @media (max-width: ($breakpoint - 1px)) {
+        font-size: rem(14px);
+    }
 }

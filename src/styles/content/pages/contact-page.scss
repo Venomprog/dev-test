@@ -1,6 +1,7 @@
 .contact-page{
     
     &__card{
+        margin-top: 200px;
         padding-bottom: 100px;
         &-col{
             width: calc(#{$col-part-d}  * 3 - #{$col-gap-d});
@@ -314,7 +315,11 @@
     }
 
     &__modal{
+        
         margin-bottom: rem(200px);
+        @media (max-width: ($breakpoint - 1px)) {
+            width: calc(#{$col-part-m} * 4 + 30px);
+        }
         &-wrapper{
             position: relative;
         }
@@ -331,26 +336,44 @@
 
             background-color: #181D1D;
             cursor: pointer;
+
+            @media (max-width: ($breakpoint - 1px)) {
+                top: 0;
+                right: 0;
+            }
         }
         &-wrapper{
-            width: calc(#{$col-part-d} * 4);
-
+            width: calc(#{$col-part-d} * 4 + rem(60px));
+            padding-left: rem(60px);
+            padding-right: rem(60px);
             
+            @media (max-width: ($breakpoint - 1px)) {
+                width: calc(#{$col-part-m} * 4 + 30px);
+                padding-left: rem(20px);
+                padding-right: rem(20px);
+            }
         }
         &-title{
-            padding-top: 48px;
+            padding-top: rem(48px);
 
             font-weight: 700;
-            font-size: 28px;
+            font-size: rem(28px);
             line-height: 120%;
             letter-spacing: -0.02em;
             text-transform: uppercase;
             color: #181D1D;
+
+            @media (max-width: ($breakpoint - 1px)) {
+                font-size: rem(18px);
+            }
         }
         &-form{
             margin-top: 32px;
 
             width: calc(#{$col-part-d} * 4 - #{$col-gap-d} - 60px);
+            @media (max-width: ($breakpoint - 1px)){
+                width: 100%;
+            }
         }
         
     }
@@ -396,5 +419,13 @@
     align-items: flex-end;
     svg{
         width: 165px;
+    }
+}
+
+.container__modal{
+    display: none;
+    height: 100vh;
+    @media (max-width: ($breakpoint - 1px)) {
+        width: calc(#{$col-part-m} * 4 + 30px);
     }
 }
