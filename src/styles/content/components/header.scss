@@ -157,12 +157,12 @@
         }
     }
     &__mail-user--row{
-        width: calc(#{$col-part-d} * 1);
+        width: calc(#{$col-part-d} * 1 - #{$col-gap-d});
         display: flex;
         align-items: center;
     }
     &__mail{
-        margin-left: 32px;
+        
         svg{
             display: block;
         }
