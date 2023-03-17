@@ -288,7 +288,10 @@
             display: flex;
             gap: rem(8px);
             margin-bottom: rem(32px);
+            overflow-x: scroll;
+            @include scrollbar-hidden;
 
+            
             &-item{
                 padding: rem(15px) rem(25px);
 
@@ -302,6 +305,12 @@
                 border-radius: rem(58px);
                 cursor: pointer;
                 transition: 0.5s;
+
+                @media (max-width: ($breakpoint - 1px)) {
+                    padding: rem(8px) rem(16px);
+
+                    font-size: rem(10px);
+                }
                 &:hover{
                     background: #006525;
                     color: #FFFFFF;
@@ -371,6 +380,7 @@
             margin-top: 32px;
 
             width: calc(#{$col-part-d} * 4 - #{$col-gap-d} - 60px);
+
             @media (max-width: ($breakpoint - 1px)){
                 width: 100%;
             }

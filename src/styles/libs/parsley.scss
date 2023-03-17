@@ -1,0 +1,14 @@
+.parsley{
+  &-error{
+    border: 1px solid #E84343 !important;
+  }
+  &-errors-list{
+    margin-top: rem(6px);
+    li{
+      font-weight: 500;
+      font-size: rem(11px);
+      line-height: 130%;
+      color: #E84343;
+    }
+  }
+}

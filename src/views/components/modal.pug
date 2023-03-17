@@ -6,9 +6,9 @@ mixin modal
                     +close-modal-btn
                 .contact-page__row.contact-page__row--form(data-modal="")
                     .contact-page__modal-title.modal--title Задать вопрос <br> по процедуре
-                    form.form.contact-page__modal-form
-                        input.form__input(type="text" placeholder="ФИО")
-                        textarea.form__input.form__textarea#form(name="text", cols="30", rows="10" placeholder="Текст вопроса")
+                    form.form.contact-page__modal-form(data-parsley-validate="" id="questionForm")
+                        input.form__input(type="text" placeholder="ФИО" required data-parsley-maxlength="10" id="first")
+                        textarea.form__input.form__textarea#form(name="text", cols="30", rows="10" placeholder="Текст вопроса" required)
                         label.form__checkbox
                             input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="person")
                             .form__checkbox-box

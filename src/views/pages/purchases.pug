@@ -10,8 +10,11 @@ block content
       .purchases__container 
         .purchases__titles 
           .purchases__titles-item Номер закупки, статус
+          
           .purchases__titles-item Тип и наименование
+          
           .purchases__titles-item Прием заявок
+        
         .purchases__wrapper.purchases__wrapper--desktop
           a.purchases__wrapper-item(href="#")
             .purchases__wrapper-col
@@ -22,6 +25,10 @@ block content
                     .purchases__inner-accept--icon
                       +accept-svg
                     .purchases__inner-acept--text Прием заявок
+                    .tooltip.tooltip-svg(id='tooltip')
+                      +tooltip-svg
+                    span 
+                      .tooltip__content(id="tippy1" style="display: none;") Это текст всплывающей подсказки
                 .purchases__sub-col.purchases__sub-col--type
                   .purchases__inner-type Открытый конкурс в электронной форме № 14/ОКЭ-АО «ОТЛК ЕРА»/2021 на оказание консультационных услуг по разработке системы управления рисками АО «ОТЛК ЕРА» (СУР) 
                 .purchases__sub-col.purchases__sub-col--acceptance 
@@ -112,12 +119,14 @@ block content
                     .purchases__date-bot 12:00 Мск
                 .purchases__date-send Заявок отправлено: 
                     span 23
-            .purchases__wrapper-col
-              .slider-buttons__item.purchases__button
-                +slider-arrow-svg.arrow-svg.arrow-svg--right.purchases-btn-svg
+            .purchases__wrapper-col.purchases__item-footer
+              .purchases__button
+                +card-arrow-svg
+              .purchases__item-footer--text Подробнее
           .purchases__wrapper-item
             .purchases__wrapper-col
               .purchases__inner
+                .purchases__titles-mobile Номер закупки, статус
                 .purchases__sub-col.purchases__sub-col--number
                   .purchases__inner-number 2
                   .purchases__inner-accept 
@@ -125,7 +134,9 @@ block content
                       +accept-svg
                     .purchases__inner-acept--text Прием заявок
                 .purchases__sub-col.purchases__sub-col--type
+                  .purchases__titles-mobile Тип и наименование
                   .purchases__inner-type Открытый конкурс в электронной форме № 14/ОКЭ-АО «ОТЛК ЕРА»/2021 на оказание консультационных услуг по разработке системы управления рисками АО «ОТЛК ЕРА» (СУР) 
+                .purchases__titles-mobile Прием заявок 
                 .purchases__sub-col.purchases__sub-col--acceptance 
                   .purchases__date.purchaces__date-left
                     .purchases__date-top 14.10.2022
@@ -137,12 +148,14 @@ block content
                     .purchases__date-bot 12:00 Мск
                 .purchases__date-send Заявок отправлено: 
                     span 23    
-            .purchases__wrapper-col
-              .slider-buttons__item.purchases__button
-                +slider-arrow-svg.arrow-svg.arrow-svg--right.purchases-btn-svg
+            .purchases__wrapper-col.purchases__item-footer
+              .purchases__button
+                +card-arrow-svg
+              .purchases__item-footer--text Подробнее
           .purchases__wrapper-item
             .purchases__wrapper-col
               .purchases__inner
+                .purchases__titles-mobile Номер закупки, статус
                 .purchases__sub-col.purchases__sub-col--number
                   .purchases__inner-number 3
                   .purchases__inner-accept 
@@ -150,7 +163,9 @@ block content
                       +accept-svg
                     .purchases__inner-acept--text Прием заявок
                 .purchases__sub-col.purchases__sub-col--type
+                  .purchases__titles-mobile Тип и наименование
                   .purchases__inner-type Открытый конкурс в электронной форме № 14/ОКЭ-АО «ОТЛК ЕРА»/2021 на оказание консультационных услуг по разработке системы управления рисками АО «ОТЛК ЕРА» (СУР) 
+                .purchases__titles-mobile Прием заявок 
                 .purchases__sub-col.purchases__sub-col--acceptance 
                   .purchases__date.purchaces__date-left
                     .purchases__date-top 14.10.2022

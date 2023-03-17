@@ -24,11 +24,14 @@ document.addEventListener('DOMContentLoaded', () =>{
     
 
     $.fancybox.defaults.smallBtn = false;
-    openModal.addEventListener('click', (event) =>{
+    if (openModal){
+        openModal.addEventListener('click', (event) =>{
         
-        event.preventDefault();
-        $.fancybox.open($(modal));
-    });
+            event.preventDefault();
+            $.fancybox.open($(modal));
+        });
+    }
+    
 
     
 })

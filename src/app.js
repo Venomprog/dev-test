@@ -2,8 +2,10 @@ import "./styles/app";
 
 import "./scripts/test";
 
+import "./scripts/tooltip";
 import "./scripts/accordion";
 import "./scripts/select";
+import "./scripts/parsley";
 import "./scripts/form";
 import "./scripts/file-cards";
 import "./scripts/file-tabs";

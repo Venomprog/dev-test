@@ -1,0 +1,185 @@
+.ecology{
+  margin-bottom: rem(48px);
+
+  &__header{
+    margin-bottom: rem(60px);
+
+    font-weight: 700;
+    font-size: rem(46px);
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #181D1D;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      font-size: rem(18px);
+      margin-bottom: rem(20px);
+    }
+  }
+
+  &__wrapper{
+    @media (max-width: ($breakpoint - 1px)) {
+      width: 100%;
+      // width: calc(#{$col-part-m} * 4 - #{$col-part-m});
+    }
+  }
+
+  &__list{
+    display: flex;
+    align-items: center;
+    gap: rem(20px);
+    
+    @media (max-width: ($breakpoint - 1px)) {
+      @include scrollbar-hidden;
+      overflow-x: scroll;
+      flex-shrink: 0;
+      width: calc(100% + 40px);
+      margin-left: -20px;
+      padding: 0 20px;
+      
+    }
+    
+  }
+
+  &__item{
+    --size-circle: #{rem(587px)};
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    flex-shrink: 0;
+
+    width: var(--size-circle);
+    height: var(--size-circle);
+
+    border: 1px dashed #006525;
+    background-color: #FFFFFF;
+    border-radius: 50%;
+    z-index: 0;
+    @media (max-width: ($breakpoint - 1px)) {
+      --size-circle: #{rem(249px)};
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: -1px;
+      bottom: -1px;
+      z-index: -1;
+      background: linear-gradient(200.31deg, #006525 23.19%, rgba(0, 101, 37, 0) 30.97%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    &-inner{
+      background-color: #FFFFFF;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+    }
+  }
+
+
+  &__icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    margin-bottom: rem(20px);
+
+    width: rem(100px);
+    height: rem(100px);
+    
+    @media (max-width: ($breakpoint - 1px)) {
+      width: rem(50px);
+      height: rem(50px);
+      margin-bottom: rem(8px);
+    }
+    .ecology__icon-svg--boat{
+      width: rem(86px);
+      height: rem(56px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: rem(43px);
+        height: rem(28px);
+      }
+    }
+    .ecology__icon-svg--trailer{
+      width: rem(87px);
+      height: rem(56px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: rem(43px);
+        height: rem(28px);
+      }
+    }
+    .ecology__icon-svg--plane{
+      width: rem(62px);
+      height: rem(70px);
+      @media (max-width: ($breakpoint - 1px)) {
+        width: rem(31px);
+        height: rem(35px);
+      }
+    }
+  }
+
+
+  &__number{
+    margin-bottom: rem(16px);
+
+    font-weight: 700;
+    font-size: rem(106px);
+    line-height: 90%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: #006525;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      font-size: rem(32px);
+      line-height: 90%;
+      margin-bottom: rem(8px);
+    }
+  }
+
+
+  &__text{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: 500;
+    font-size: rem(20px);
+    line-height: 160%;
+    color: #181D1D;
+
+    @media (max-width: ($breakpoint - 1px)) {
+      font-size: rem(14px);
+      line-height: 90%;
+    }
+    &.small{
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: rem(32px);
+
+      font-weight: 700;
+      font-size: rem(20px);
+      line-height: 90%;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      color: #006525;
+
+      @media (max-width: ($breakpoint - 1px)) {
+        margin-bottom: rem(12px);
+
+        font-size: rem(10px);
+      }
+    }
+  }
+  
+}

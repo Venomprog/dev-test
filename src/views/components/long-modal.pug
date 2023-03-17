@@ -1,0 +1,30 @@
+mixin long-modal 
+  section.long-modal 
+    .container.long-modal__container
+      .modal       
+        .contact-page__row.contact-page__row--form
+            .long-modal__header.modal--title Оставить заявку на расчет
+            form.form.long-modal__form(data-parsley-validate="")
+              .form__input-list
+                .form__input-wrapper
+                  input.form__input(type="text" placeholder="ФИО" required data-parsley-maxlength="10" id="first")
+                .form__input-wrapper
+                  input.form__input(type="text" placeholder="Наименование компании"  id="first")
+                .form__input-wrapper
+                  input.form__input(type="email" placeholder="E-mail" id="first")
+                .form__input-wrapper
+                  input.form__input(type="tel" placeholder="Телефон"  id="first")
+              .form__input-textarea
+                textarea.form__input.form__textarea#form(name="text", cols="30", rows="10" placeholder="Текст вопроса" required)
+              .form__input-checkbox
+                label.form__checkbox
+                    input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="person")
+                    .form__checkbox-box
+                        +checkbox-mark
+                    .form__checkbox-text Согласие с политикой в отношении 
+                        a.form__checkbox-text--link(href="#") обработки персональных данных
+                .form__button 
+                    button.form-button.form__button-submit(type="submit" data-submit="") Отправить
+        //- .contact-page-modal__row.contact-page__row--submit(data-modal-visible="") 
+        //-     .contact-page__modal-title.modal--title Вопрос отправлен
+        //-     button.form-button.form__button--close(data-fancybox-close="") Закрыть
