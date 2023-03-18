@@ -91,7 +91,7 @@
     }
     &-item{
       display: flex;
-      
+      width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
       margin-bottom: rem(10px);
 
       color: #181D1D;
