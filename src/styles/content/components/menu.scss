@@ -1,5 +1,9 @@
 .menu{
-
+    &:hover{
+        .menu__wrapper{
+            background-color: #006525;
+        }
+    }
     &__wrapper {
         padding: 57px 11px 17px;
         background-color: #181D1D;

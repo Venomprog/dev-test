@@ -4,7 +4,7 @@
         display: flex;
         align-items: center;
         gap: rem(8px);
-        width: auto;
+        width: auto !important;
         // width: calc(#{$col-part-d} * 11 );
 
         @media (max-width: ($breakpoint - 1 px)){
@@ -23,7 +23,7 @@
             background: rgba(0, 0, 0, 0.06);
             border-radius: rem(58px);
             cursor: pointer;
-            width: rem(96px);
+            width: auto;
             
             
         }

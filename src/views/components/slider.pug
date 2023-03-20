@@ -4,7 +4,7 @@ mixin slider
             .title.slider__title Наша история
             .slider__wrapper
                 .slider__wrapper-col
-                    .slider__buttons.slider-row.swiper.swiper-thumbs
+                    .slider__buttons.slider-row.swiper.swiper-thumbs(data-thumbs='1')
                         .buttons-date.slider__buttons-date.swiper-wrapper
                             .button.buttons-date__item.swiper-slide 2015
                             .button.buttons-date__item.swiper-slide 2016
@@ -15,11 +15,11 @@ mixin slider
                             .button.buttons-date__item.swiper-slide 2021
                             .button.buttons-date__item.swiper-slide 2022
                     .slider-buttons.slider__buttons-arrow
-                        .slider-buttons__item.left-slide
+                        .slider-buttons__item.left-slide(data-slider-left="1")
                             +slider-arrow-svg.arrow-svg.arrow-svg--left
-                        .slider-buttons__item.right-slide
+                        .slider-buttons__item.right-slide(data-slider-right="1")
                             +slider-arrow-svg.arrow-svg.arrow-svg--right
-                .swiper.slider__wrapper--history
+                .swiper.slider__wrapper--history(data-slider="1" data-slider-thumbs='' data-buttons-id="1")
                     .swiper-wrapper
                         .slider-row.slide.swiper-slide
                             .slide__content
@@ -78,63 +78,4 @@ mixin slider
                                 .slide__content-text
                                     .slide__title 2022
                                     .slide__text 
-        section.slider.slider-history
-            .title.slider__title Наша история
-            .slider__wrapper.swiper 
-                .slider__buttons.slider-row
-                    .buttons-date.slider__buttons-date  
-                        .button.buttons-date__item 2015
-                        .button.buttons-date__item 2016
-                        .button.buttons-date__item.active 2017
-                        .button.buttons-date__item 2018
-                        .button.buttons-date__item 2019
-                        .button.buttons-date__item 2020
-                        .button.buttons-date__item 2021
-                        .button.buttons-date__item 2022
-                    .slider-buttons.slider__buttons-arrow
-                        .slider-buttons__item.left-slide
-                            +slider-arrow-svg.arrow-svg.arrow-svg--left
-                        .slider-buttons__item.right-slide
-                            +slider-arrow-svg.arrow-svg.arrow-svg--right
-                .swiper-wrapper
-                    .slider-row.slide.swiper-slide
-                        .slide__content
-                            .slide__content-img
-                                +picture(src = 'train')
-                            .slide__content-text
-                                .slide__title 2017
-                                .slide__text Период активной деятельности нашего совместного предприятия как отдельной и независимой бизнес-единицы на рынке перевозок контейнеров начался в 2016 году. Это был год, когда акционерами Компании были согласованы и утверждены ключевые  принципы и стратегические направления развития. Несмотря на сложный период  становления базовых регламентов деятельности, нам удалось уже в первый год удвоить объём перевозок по сравнению с 2015 годом и нарастить хорошую клиентскую базу для последующих периодов.
-    section.slider.slider-was
-        .slider__wrapper.swiper.swiper--was
-            .slider__buttons.slider-row.container
-                .title.slider__title Как это было
-                .slider-buttons.slider__buttons-arrow
-                    .slider-buttons__item.left-slide
-                        +slider-arrow-svg.arrow-svg.arrow-svg--left
-                    .slider-buttons__item.right-slide
-                        +slider-arrow-svg.arrow-svg.arrow-svg--right
-            .swiper-wrapper
-                .slider-row--was.swiper-slide.slider-row--was
-                    .slide__inner
-                        .slide__inner-img
-                            +picture(src = 'train')
-                .slider-row--was.swiper-slide
-                    .slide__inner
-                        .slide__inner-img
-                            +picture(src = 'tree')
-                .slider-row--was.swiper-slide
-                    .slide__inner
-                        .slide__inner-img
-                            +picture(src = 'tree')
-                .slider-row--was.swiper-slide.slider-row--was
-                    .slide__inner
-                        .slide__inner-img
-                            +picture(src = 'tree')
-                .slider-row--was.swiper-slide
-                    .slide__inner
-                        .slide__inner-img
-                            +picture(src = 'train')
-                .slider-row--was.swiper-slide
-                    .slide__inner
-                        .slide__inner-img
-                            +picture(src = 'tree')
+        

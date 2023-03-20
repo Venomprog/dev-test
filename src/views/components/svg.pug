@@ -196,11 +196,33 @@ mixin dvigatel-svg
     circle(cx='50' cy='31.8652' r='3.1' stroke='#006525' stroke-width='1.8')
 
 mixin card-logo-svg 
-  svg(width='128' height='217' viewbox='0 0 128 217' fill='none' xmlns='http://www.w3.org/2000/svg')
+  svg(class=attributes.class width='128' height='217' viewbox='0 0 128 217' fill='none' xmlns='http://www.w3.org/2000/svg')
     path(d='M128 55.5678L0 0.865173V217.865H128V55.5678Z' fill='url(#paint0_linear_1129_11795)')
     defs
       lineargradient#paint0_linear_1129_11795(x1='64' y1='0.865173' x2='64' y2='217.865' gradientunits='userSpaceOnUse')
         stop(stop-color='#C9ECDB')
         stop(offset='1' stop-color='#C0EACF' stop-opacity='0')
 
+mixin card-logo-mob-svg 
+  svg(class=attributes.class width='128' height='217' viewbox='0 0 128 217' fill='none' xmlns='http://www.w3.org/2000/svg')
+    path(d='M128 55.5678L0 0.865173V217.865H128V55.5678Z' fill='url(#paint1_linear_1129_11795)')
+    defs
+      lineargradient#paint1_linear_1129_11795(x1='64' y1='0.865173' x2='64' y2='217.865' gradientunits='userSpaceOnUse')
+        stop(stop-color='#C9ECDB')
+        stop(offset='1' stop-color='#C0EACF' stop-opacity='0')
+
 //background-image: url("data:image/svg+xml,svg(width='128' height='217' viewbox='0 0 128 217' fill='none' xmlns='http://www.w3.org/2000/svg') path(d='M128 55.5678L0 0.865173V217.865H128V55.5678Z' fill='url(%23paint0_linear_1129_11795)') defs lineargradient%23paint0_linear_1129_11795(x1='64' y1='0.865173' x2='64' y2='217.865' gradientunits='userSpaceOnUse') stop(stop-color='%23C9ECDB') stop(offset='1' stop-color='%23C0EACF' stop-opacity='0')%0A");
+
+mixin heart-beat-svg 
+  svg(class=attributes.class  xmlns='http://www.w3.org/2000/svg' width='219' height='178' viewbox='0 0 219 178' fill='none')
+    rect(x='10.0908' y='10.0909' width='231.818' height='231.818' stroke='#005C22' stroke-width='20' stroke-linecap='round')
+    path(d='M10.0908 146.454H81.6817L105.545 183.954L143.045 71.4545H238.5' stroke='#005C22' stroke-width='20')
+
+
+mixin heart-beat-white-svg 
+  svg(xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='24' height='24' viewbox='0 0 24 24' fill='none')
+    rect(width='24' height='24' fill='url(#pattern0)')
+    defs
+      pattern#pattern0(patterncontentunits='objectBoundingBox' width='1' height='1')
+        use(xlink:href='#image0_1626_46369' transform='scale(0.0113636)')
+      image#image0_1626_46369(width='88' height='88' xlink:href='data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFgAAABYCAYAAABxlTA0AAAAAXNSR0IArs4c6QAAAERlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAA6ABAAMAAAABAAEAAKACAAQAAAABAAAAWKADAAQAAAABAAAAWAAAAADngEgQAAADh0lEQVR4Ae2d4W3bMBCF7aIDdAR1g2xgdoKOUGeDdAI7EzSdwM4klTfoBvEI2cB9L6VA1mArCiAtvuoOYHiiqNPd5/ODIf3IamVmBIyAETACRsAIGAEjYASWR2CdU/LlctliX5ezd0F7Xtbr9fNYve/HNni4h7F9SzwPNqsxyO8ywHQZe5a65eNY4aMdfBWgx/Hpam1phxsU7HKLngr4hK/EPjf4/7gPssD6XW5tORKRG8v2JQgY4ASUkksGuCTNRCwDnIBScskAl6SZiGWAE1BKLhngkjQTsQxwAkrJJQNckmYilgFOQCm5ZIBL0kzEMsAJKCWXDHBJmolYU5+mJULMt4QnWx3uvr1xBnxcmW3SgFGlw9hlVzvDRnWJ+DIDs0m3lO1gLw8uqvYx8mu6Vd9o1Ex8amwXXdDf6k3Lkt5oxPJwjGA35UpqcEIemn0RKwkYLeqiNqU8nKPjplxVwBLywE9aDrCSPEgCRtKOiXtrWh6Yo1wHI2cZeZADrCYPcoCRsGPS3pqXB+apJhFS8iAFWFEepAAjWceEvUnIA3NVkgg5eZABrCoPMoCRqGOy3mTkgfmqSISkPEgAVpYHAp76ymiDgve8sJRlvIlw0b2k5IF5TwXMYjmKGT6wV0B++kdAWXlgTS1o8A6QuxRgv+6ic82+uYhy/MOd2sE9ri5V5GfEusP4gHHA+IRxbS5akJMH5j4V8ClDMyMmf3fRnT3O/vA7HI4fElIhLQ+sbTaJAMwe9//OJLztAJnd/GbwOzju7eD3n1LfnChkfXc2wL60Peaz9wn3m/c5uciXlAfmPytgdPErcriPQG7Ruc4fy8sD65gVMBPwUvFM39sBkO/gu2EBs6Q8MP/ZAXuID5jZzbQOg78qBpOVBxbQBGAvFY8DUczs4MGOg6M4NwGY4AD5CVNP/8pk5YF1NAPYQ73HPEgFl6TlgQU0BRhdfEZOsVQccSxtTQEmSS8VPz1VaXlgDc0B9mC/YpaXB9Yy9VmEr7/uhC7u8Vv4XPcut4neagdTKgzwbXpA+y7NdrA21pC9AQ4sqngGuArWENQABxZVPANcBWsIaoADiyqeAa6CNQQ1wIFFFc8AV8Eagk59FrHBM4J9uHyR3mZK1VMBOwTnMMskkCMR58xYS9t2QcEvY0WvxzbwPGRhi6nDMAsEsv7NQ9hunhEwAkbACBgBI2AEjIARWA6BX3ShqtJV5dY3AAAAAElFTkSuQmCC')
