@@ -39,6 +39,94 @@ mixin header
                     .user__name.header-link_arrow
                         p A.
                         +arrow-svg 
+        .menu--full.zed-zero
+            .overlay.hidden
+            .container.header__menu--open.hidden
+                .header__row-menu
+                    .header__col-menu.header__contact-links
+                        //-Сделать разделение на 2 блока, блок с медиа и блок с политикой
+                        .header__col-linkers
+                            .header__phone-link
+                                a.header-link.header-link--main(href="tel:74959959591") +7 495 995-95-91
+                            .header__mail-link
+                                a.header-link.header-link--main(href="mailto:utlc@utlc.com") utlc@utlc.com 
+                            .header__media-links
+                                a.header__media-link(href="#")
+                                    +footer-tg-svg
+                                a.header__media-link(href="#")
+                                    +footer-dzen-link
+                                a.header__media-link(href="#")
+                                    +footer-chat-link 
+                    .header__col-menu.header__page-links
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title 
+                                    h2 О компании
+                                ul.header__page-list 
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Органы управления и контроля
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Реестродержатель
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Документы
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Дипломы и сертификаты
+                            .header__politics
+                                a.header__page-link(href="#") Пресс-центр
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title
+                                    h2 Корпоративная социальная ответственность
+                                ul.header__page-list 
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Экология
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Благотворительность
+                                    li.header__page-item
+                                        a.header__page-link(href="#") UTLC CUP
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Карьера
+                            .header__politics
+                                a.header__page-link(href="#") ERAI
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title  
+                                    h2 Закупки
+                                ul.header__page-list 
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Календарь мероприятий
+                                    li.header__page-item
+                                        a.header__page-link(href="#") План закупок
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Личный кабинет поставщика
+                            .header__politics
+                                a.header__page-link(href="#") Контакты
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title 
+                                    h2 One million club
+                                ul.header__page-list  
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Календарь событий
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Отраслевые новости
+                            .header__politics 
+                                a.header__page-link(href="#") Часто задавые вопросы
+                .header__row-menu
+                    .header__bot-col 
+                        .company © АО «ОТЛК ЕРА», 2023
+                    .header__bot-col 
+                        .header__partners-row
+                            .header__partners-col
+                                img(src="assets/images/joli.png", alt="Лого партнера компании")
+                            .header__partners-col
+                                img(src="assets/images/footer-partner-2.png", alt="Лого партнера компании")
+                            .header__partners-col
+                                img(src="assets/images/footer-partner-1.png", alt="Лого партнера компании")
+                    .header__bot-col 
+                        .copyright.copyright--big
+                            a.copyright__link(href="#") Сделано в 
+                                span.copyryght__link_green CloudMill
     .container.header--mobile
         header.header
             .header__row 
@@ -59,10 +147,96 @@ mixin header
                         .header__mail.header__btn 
                                 .mail__img
                                     +mail-logo-svg
-                    .menu.header__menu
+                    .menu.header__menu.header__menu--mob
                         .menu__wrapper
                             .menu__text
                                 |МЕНЮ
                             .burger.menu__burger
                                 span.burger__line 
                                 span.burger__line.burger__line-mg-top
+        .menu-mob--full
+            .container.header__menu--open-mob
+                .header__row-menu
+                    .header__col-menu.header__contact-links
+                        .header__col-linkers
+                            .header__phone-link
+                                a.header-link.header-link--main(href="tel:74959959591") +7 495 995-95-91
+                            .header__mail-link
+                                a.header-link.header-link--main(href="mailto:utlc@utlc.com") utlc@utlc.com 
+                            .header__media-links
+                                a.header__media-link(href="#")
+                                    +footer-tg-svg
+                                a.header__media-link(href="#")
+                                    +footer-dzen-link
+                                a.header__media-link(href="#")
+                                    +footer-chat-link 
+                    .header__col-menu.header__page-links
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title 
+                                    h2 О компании
+                                ul.header__page-list 
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Органы управления и контроля
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Реестродержатель
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Документы
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Дипломы и сертификаты
+                            .header__politics
+                                a.header__page-link(href="#") Пресс-центр
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title
+                                    h2 Корпоративная социальная ответственность
+                                ul.header__page-list 
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Экология
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Благотворительность
+                                    li.header__page-item
+                                        a.header__page-link(href="#") UTLC CUP
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Карьера
+                            .header__politics
+                                a.header__page-link(href="#") ERAI
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title  
+                                    h2 Закупки
+                                ul.header__page-list 
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Календарь мероприятий
+                                    li.header__page-item
+                                        a.header__page-link(href="#") План закупок
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Личный кабинет поставщика
+                            .header__politics
+                                a.header__page-link(href="#") Контакты
+                        .list.header__col-item
+                            .header-menu__wrapper
+                                .header__col-title 
+                                    h2 One million club
+                                ul.header__page-list  
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Календарь событий
+                                    li.header__page-item
+                                        a.header__page-link(href="#") Отраслевые новости
+                            .header__politics 
+                                a.header__page-link(href="#") Часто задавые вопросы
+                .header__row-menu
+                    .header__bot-col 
+                        .company © АО «ОТЛК ЕРА», 2023
+                    .header__bot-col 
+                        .header__partners-row
+                            .header__partners-col
+                                img(src="assets/images/joli.png", alt="Лого партнера компании")
+                            .header__partners-col
+                                img(src="assets/images/footer-partner-2.png", alt="Лого партнера компании")
+                            .header__partners-col
+                                img(src="assets/images/footer-partner-1.png", alt="Лого партнера компании")
+                    .header__bot-col 
+                        .copyright.copyright--big
+                            a.copyright__link(href="#") Сделано в 
+                                span.copyryght__link_green CloudMill

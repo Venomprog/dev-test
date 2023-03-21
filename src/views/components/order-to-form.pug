@@ -13,31 +13,67 @@ mixin order-form
               .order-dates__date 16.01.2023
           .order-buttons.order-form--buttons 
             .order-buttons__item 
-              .order-buttons__icon 
-              .order-buttons__text Редактировать заявку
+              .order-buttons__icon
+                +pencil-svg 
+              .order-buttons__text(data-change-button="1") Редактировать заявку
             .order-buttons__item 
-              .order-buttons__icon 
+              .order-buttons__icon
+                +close-mark-svg
               .order-buttons__text Отменить заявку
         .order-form__col
           .order-table.order-form__table(data-init-table="1")
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left страна
+              .order-table__col.order-table--right(data-table-input="country") Россия
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left Полное наименование Участника
+              .order-table__col.order-table--right(data-table-input="company")  ООО «Оснащение от и дно»
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left инн
+              .order-table__col.order-table--right(data-table-input="inn")  6449013711
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left имя
+              .order-table__col.order-table--right(data-table-input="name")  Кирилл Громов
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left телефон
+              .order-table__col.order-table--right(data-table-input="phone")  +7 911 286-25-61
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left E-mail
+              .order-table__col.order-table--right(data-table-input="email")  sv@cloudmill.ru
             .order-table__row 
-              .order-table__col.order-table--left
-              .order-table__col.order-table--right
+              .order-table__col.order-table--left документы
+              .order-table__col.order-table--right Реквизиты.pdf
+  section 
+    .container.container__order
+        .contact-page__modal 
+            .modal.contact-page__modal-wrapper
+                .contact-page__modal--close-btn
+                    +close-modal-btn
+                .contact-page__row.contact-page__row--form(data-modal="")
+                    .contact-page__modal-title.modal--title Задать вопрос <br> по процедуре
+                    form.form.contact-page__modal-form(data-parsley-validate="" id="questionForm")
+                      .map-wrapper__filter
+                        .select-wrapper 
+                            .select
+                                select.select__select(width='100%' data-form-input="country")
+                                    each item in ['qqqqqq', 'Россия', 'Belarus', 'Japan']
+                                        option(value=item)
+                                            |#{item}
+                      .form__input-block
+                        input.form__input(type="text" placeholder="" required data-parsley-maxlength="50" data-form-input="name")
+                        input.form__input(type="text" placeholder="" required data-parsley-maxlength="50" data-form-input="company")
+                        input.form__input(type="phone" placeholder="" required data-parsley-maxlength="50" data-form-input="phone")
+                        input.form__input(type="email" placeholder="" required data-parsley-maxlength="50" data-form-input="email") 
+                        input.form__input(type="text" placeholder="" required data-parsley-maxlength="50" data-form-input="inn")
+                      .form__label-block
+                        label.form__checkbox
+                            input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="person" required)
+                            .form__checkbox-box
+                                +checkbox-mark
+                            .form__checkbox-text Согласие с политикой в отношении 
+                                a.form__checkbox-text--link(href="#") обработки персональных данных
+                      .form__button 
+                          button.form-button.form__button-submit(type="submit" data-submit="") Отправить
+                .contact-page-modal__row.contact-page__row--submit(data-modal-visible="") 
+                    .contact-page__modal-title.modal--title Вопрос отправлен
+                    button.form-button.form__button--close(data-fancybox-close="") Закрыть

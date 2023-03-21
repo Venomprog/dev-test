@@ -13,5 +13,7 @@ import "./scripts/swiper";
 import "./scripts/modal";
 import "./scripts/scroll";
 import "./scripts/map";
+import "./scripts/order";
+import "./scripts/header";
 
 
