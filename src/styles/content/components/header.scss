@@ -465,6 +465,8 @@
         top: 72px;
         left: 0px;
         // padding-top: rem(72px);
+        height: calc(100vh - rem(72px));
+        overflow-y: scroll;
         transform: translateX(150%);
         transition: 0.7s;
         background: #FFFFFF;

@@ -13,5 +13,9 @@
         @media (max-width: ($breakpoint - 1px)){
             width: 28px;
         }
+
+        &.burger-active{
+            
+        }
     }
 }

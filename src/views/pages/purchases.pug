@@ -181,6 +181,112 @@ block content
               .purchases__button
                 +card-arrow-svg
               .purchases__item-footer--text Подробнее
-
+  +counters
+  secction.filters 
+    .container.container-filters
+      .filters-content
+        .filters__wrapper
+          .filters__main(data-filter-first="1")
+            .filters-text.filters__main-text Фильтр
+            .filters-icon.filters__main-icon
+              +plus-svg
+        .filters-category
+          .filters-back.filters-category__back(data-filter-first="1")
+            .filters-back__icon
+              +slider-arrow-svg.filters__blue-arrow
+            .filters-back__text Назад
+          .filters-item.filters-category__item(data-filter-category="1")
+            .filters-item__inner
+              .filters-text.filters-item__text Местоположение
+              .filters-icon.filters-item__icon
+                +slider-arrow-svg.filters__black-arrow
+            
+          .filters-item.filters-category__item(data-filter-category="2")
+            .filters-item__inner
+              .filters-text.filters-item__text Категория продукции
+              .filters-icon.filters-item__icon
+                +slider-arrow-svg.filters__black-arrow
+            
+          .filters-item.filters-category__item(data-filter-category="3")
+            .filters-item__inner
+              .filters-text.filters-item__text Тип объекта
+              .filters-icon.filters-item__icon
+                +slider-arrow-svg.filters__black-arrow
+            
+        .filters-checkboxes(data-filter-checkboxes="1")
+              .filters-back.filters-category__back(data-filter-back="1")
+                .filters-back__icon
+                  +slider-arrow-svg.filters__blue-arrow
+                .filters-back__text Местоположение
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="moscov")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text moscov
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="piter")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text piter
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="vlgograd")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text vlgograd 
+        .filters-checkboxes(data-filter-checkboxes="2")
+              .filters-back.filters-category__back(data-filter-back="2")
+                .filters-back__icon
+                  +slider-arrow-svg.filters__blue-arrow
+                .filters-back__text Категория продукции
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="ball")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text ball 
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="swim")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text swim 
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="ping")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text ping 
+        .filters-checkboxes(data-filter-checkboxes="3")
+              .filters-back.filters-category__back(data-filter-back="3")
+                .filters-back__icon
+                  +slider-arrow-svg.filters__blue-arrow
+                .filters-back__text Тип объекта
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="vodka")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text vodka 
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="pivo")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text pivo 
+              .filters-checkboxes__item 
+                label.form__checkbox
+                  input.form__checkbox-input.form___input--checkbox(type="checkbox"  name="person" id="erch")
+                  .form__checkbox-box
+                      +checkbox-mark
+                  .form__checkbox-text erch
+        .button-confirm.filters__button-confirm
+          .button-confirm__inner Complete
+        .button-reset.filters__button-reset 
+          .button-reset__wrapper Очистить
+        .filters-confirm.filters__confirm 
+          .filters-confirm__wrapper
 
 

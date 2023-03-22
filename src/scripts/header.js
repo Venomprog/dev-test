@@ -34,9 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
   function toggleHeaderMob(){
     menuFullMob.classList.toggle('visible')
     bodyScroll.classList.toggle('none-scroll')
-    if (!headerDesktop.classList.contains('scroll')){
-      headerDesktop.classList.toggle('scroll')
-    }
     
   }
 })
