@@ -4,12 +4,21 @@ extends ../layouts/master
 block content
     .container
         section.news
+            
             a.news__button(href="#")
                 .news__button-img
                     +card-arrow-svg.news-arrow-left
                 .news__button-text
                     .news-back-link Ко всем новостям
-            .news__wrapper 
+            .news__wrapper(data-select-data=ddata)
+                .counters-item 
+                    .counters-item__title Children 6-16 years old
+                    .counter.counters-item__counter 
+                    button.button.counter__button(data-counter-left="3")
+                        +mines-svg
+                    .counter__number(data-number-container="3" data-number-invalid="none") 0
+                    button.button.counter__button(data-counter-right="3")
+                        +plus-count-svg
                 .news-row.news__row
                     h1 АО «ОТЛК ЕРА» вошло в состав вновь созданного Сектора по развитию транспорта необщего пользования при РСПП
                 .news-row.news__row-tags

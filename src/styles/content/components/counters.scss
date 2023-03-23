@@ -23,3 +23,17 @@
     padding: rem(16px) rem(29px);
   }
 }
+
+
+.select-wrapper{
+  &.hidden{
+    opacity: 0.5;
+    pointer-events: none;
+    cursor: not-allowed;
+  }
+}
+
+
+.select-clear{
+  margin-bottom: 200px;
+}

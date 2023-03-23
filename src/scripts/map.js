@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', () => {
             // '23 32'.split(' ').map(item => Number(item))
             const corda = coords.split(' ').map(item => +item);
             // console.log(corda)
-            
             const placemark = new ymaps.Placemark(corda, 
             {
                 balloon
@@ -96,4 +95,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 })
 
+// при клике на плейсмарку на карте
+
+//Найти оффсет  и сделать скроллтоп + оффсет карточки до которойскролить
+//добавить класс актив для карточки и подсветить ее
+
+// закрывать плейсмарку при клике вне ее
 

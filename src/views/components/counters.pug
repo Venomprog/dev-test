@@ -6,41 +6,43 @@ mixin counters
           .counters-item 
             .counters-item__title Adults
             .counter.counters-item__counter 
-              .button.counter__button.counter__button-left(data-counter-left="1")
+              button.button.counter__button.counter__button-left(data-counter-left="1")
                 +mines-svg
-              .counter__number(data-number-container="1")
-              .button.counter__button(data-counter-right="1")
+              .counter__number(data-number-container="1" data-number-invalid="none") 0
+              button.button.counter__button(data-counter-right="1")
                 +plus-count-svg
           .counters-item 
             .counters-item__title Students with ISIC
             .counter.counters-item__counter 
-              .button.counter__button.counter__button-left(data-counter-left="2")
+              button.button.counter__button.counter__button-left(data-counter-left="2")
                 +mines-svg
-              .counter__number(data-number-container="2")
-              .button.counter__button(data-counter-right="2")
+              .counter__number(data-number-container="2" data-number-invalid="none") 0
+              button.button.counter__button(data-counter-right="2")
                 +plus-count-svg
           .counters-item 
             .counters-item__title Children 6-16 years old
             .counter.counters-item__counter 
-              .button.counter__button(data-counter-left="3")
+              button.button.counter__button(data-counter-left="3")
                 +mines-svg
-              .counter__number(data-number-container="3") 
-              .button.counter__button(data-counter-right="3")
+              .counter__number(data-number-container="3" data-number-invalid="none") 0
+              button.button.counter__button(data-counter-right="3")
                 +plus-count-svg
           .counters-item 
             .counters-item__title Children 0-6 years old
             .counter.counters-item__counter 
-              .button.counter__button(data-counter-left="4")
+              button.button.counter__button(data-counter-left="4")
                 +mines-svg
-              .counter__number(data-number-container="4") 
-              .button.counter__button(data-counter-right="4")
+              .counter__number(data-number-container="4" data-number-invalid="none") 0
+              button.button.counter__button(data-counter-right="4")
                 +plus-count-svg
           .counters-item 
             .counters-item__title Among them wheelchair users
             .counter.counters-item__counter 
-              .button.counter__button(data-counter-left="5")
+              button.button.counter__button(data-counter-left="5")
                 +mines-svg
-              .counter__number(data-number-container="5") 
-              .button.counter__button(data-counter-right="5")
+              .counter__number(data-number-container="5" data-number-invalid="invalid") 0
+              button.button.counter__button(data-counter-right="5")
                 +plus-count-svg
-            
+        .counters-row.counter__row 
+          .counter__row-sum 
+              

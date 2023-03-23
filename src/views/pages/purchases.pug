@@ -1,10 +1,37 @@
 extends ../layouts/master
 
 
+block header
 
 block content
   section.purchases 
     .container
+      -
+                var ddata = [
+                    {
+                        option: 'qwe',
+                        items: ['qwe1', 'qwe2']
+                    },
+                    {
+                        option: 'asd',
+                        items: ['asd1', 'asd2']
+                    },
+                    {
+                        option: 'zxc',
+                        items: ['zxc1', 'zxc2']
+                    },
+                ]
+      .select-block
+        .select-wrapper 
+          .select.select-option
+              select.select__select(width='100%' data-select-placeholder='Выбрать' data-select-data=ddata)
+                option(selected disabled) 
+        .select-wrapper.select-wrapper__item.hidden
+          .select.select-option
+              select.select__select(width='100%' data-select-placeholder='Выбрать' data-select-item=ddata)
+                option(selected disabled) 
+      .select-clear 
+        button.select-button__cleaer(data-select-clear="1") clear
       .title.purchases__title 
         h1 Закупки
       .purchases__container 
@@ -288,5 +315,23 @@ block content
           .button-reset__wrapper Очистить
         .filters-confirm.filters__confirm 
           .filters-confirm__wrapper
-
+  section.scrolling
+    .container 
+      .scrolling-wrapper 
+        .scrolling__col
+          .scrolling__sticky(data-scroll-offset="")
+            ul.scrolling__list 
+              li.scrolling__item 
+                a.scrolling__link(href="#bue" data-scroll-color='blue') blue
+              li.scrolling__item 
+                a.scrolling__link(href="#rd" data-scroll-color='red') red
+              li.scrolling__item 
+                a.scrolling__link(href="#gren" data-scroll-color='green') green
+              li.scrolling__item 
+                a.scrolling__link(href="#blck" data-scroll-color='black') black
+        .scrolling__col
+          .scrolling-row.scrolling__col-blue(id="blue" data-scroll-row='blue')
+          .scrolling-row.scrolling__col-red(id="red" data-scroll-row='red')
+          .scrolling-row.scrolling__col-green(id="green" data-scroll-row='green')
+          .scrolling-row.scrolling__col-black(id="black" data-scroll-row='black')
 

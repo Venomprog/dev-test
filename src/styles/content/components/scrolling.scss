@@ -1,0 +1,51 @@
+.scrolling{
+
+  &-wrapper{
+    display: flex;
+    width: calc(#{$col-part-d} * 12 - #{$col-gap-d});
+  }
+  &__col{
+    &:nth-child(1){
+      width: calc(#{$col-part-d} * 3);
+    }
+    &:nth-child(2){
+      width: calc(#{$col-part-d} * 9 - #{$col-gap-d});
+      border-left: 1px solid black;
+    }
+
+    &-blue{
+      background-color: blue;
+    }
+    &-red{
+      background-color: red;
+    }
+    &-green{
+      background-color: green;
+    }
+    &-black{
+      background-color: black;
+    }
+  }
+  &-row{
+    height: 50vh;
+  }
+  &__sticky{
+    border-top: 1px solid black;
+    position: sticky;
+    top: 145px;
+  }
+  &__item{
+    margin-bottom: rem(10px);
+    a{
+      font-weight: 500;
+      font-size: rem(22px);
+      line-height: 130%;
+      color: black;
+      text-decoration: none;
+
+      &.active{
+        color: blue;
+      }
+    }
+  }
+}
