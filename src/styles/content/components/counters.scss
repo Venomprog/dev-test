@@ -1,8 +1,25 @@
 .counters{
   &-item{
     &__counter{
+      display: flex;
+      
       border: 1px solid #E7E7E7;
       border-radius: rem(14px);
     }
+  }
+  &__row{
+    display: flex;
+    gap: rem(30px);
+  }
+}
+
+.counter{
+  &__button{
+    padding: rem(26px) rem(19px);
+
+    cursor: pointer;
+  }
+  &__number{
+    padding: rem(16px) rem(29px);
   }
 }
