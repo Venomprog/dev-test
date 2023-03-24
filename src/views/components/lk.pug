@@ -1,0 +1,50 @@
+mixin lk 
+  section.lkab
+    .container 
+      .lkab-wrapper.lkab__wrapper 
+        .lkab-inputs.lkab__inputs 
+          .lkab-list.lkab-inputs__list 
+            //item
+            .lkab-item.lkab-list__item
+              .lkab-item__title Email
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="email" data-input)
+            //item
+            .lkab-item.lkab-list__item 
+              .lkab-item__title Название компании
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="text" data-input)
+            //item
+            .lkab-item.lkab-list__item 
+              .lkab-item__title Пароль
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="password" data-input)
+            //item
+            .lkab-item.lkab-list__item 
+              .lkab-item__title ИНН
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="text" data-input)
+            //item
+            .lkab-item.lkab-list__item 
+              .lkab-item__title Пароль еще раз
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="password" data-input value="fasfa")
+            //item
+            .lkab-item.lkab-list__item 
+              .lkab-item__title Телефон
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="phone" data-input)
+            //item
+            .lkab-item.lkab-list__item 
+              .lkab-item__title Имя
+              .lkab-input.lkab-item__input 
+                input.lkab-input__item.not-active(type="text" data-input)
+          //buttons
+          .lkab-buttons.lkab__buttons 
+            .lkab-buttons__wrapper
+              //button
+              button.lkab-buttons__item.lkab-buttons--white(data-button-redact) Редактировать
+              //button
+              button.lkab-buttons__item.lkab-buttons--white(data-button-cancel)  Отменить
+              //button
+              button.lkab-buttons__item.lkab-buttons--blue(data-button-save)  Сохранить

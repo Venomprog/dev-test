@@ -7,18 +7,18 @@ mixin long-modal
             form.form.long-modal__form(data-parsley-validate="")
               .form__input-list
                 .form__input-wrapper
-                  input.form__input(type="text" placeholder="ФИО" required data-parsley-maxlength="10" id="first")
+                  input.form__input(type="text" placeholder="ФИО" required data-parsley-maxlength="10" id="fio1")
                 .form__input-wrapper
-                  input.form__input(type="text" placeholder="Наименование компании"  id="first")
+                  input.form__input(type="text" placeholder="Наименование компании"  id="name1")
                 .form__input-wrapper
-                  input.form__input(type="email" placeholder="E-mail" id="first")
+                  input.form__input(type="email" placeholder="E-mail" id="email2")
                 .form__input-wrapper
-                  input.form__input(type="tel" placeholder="Телефон"  id="first")
+                  input.form__input(type="tel" placeholder="Телефон"  id="phone23")
               .form__input-textarea
-                textarea.form__input.form__textarea#form(name="text", cols="30", rows="10" placeholder="Текст вопроса" required)
+                textarea.form__input.form__textarea(name="text", cols="30", rows="10" placeholder="Текст вопроса" required)
               .form__input-checkbox
                 label.form__checkbox
-                    input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="person")
+                    input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="personality")
                     .form__checkbox-box
                         +checkbox-mark
                     .form__checkbox-text Согласие с политикой в отношении 

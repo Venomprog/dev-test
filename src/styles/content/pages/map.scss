@@ -15,6 +15,7 @@
                 
                 height: 100%;
                 overflow: scroll;
+                transition: 0.5s;
                 @include styled-scrollbar(#fff);
                 &::before{
                     content: "";

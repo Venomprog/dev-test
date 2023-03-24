@@ -6,11 +6,11 @@ mixin modal
                     +close-modal-btn
                 .contact-page__row.contact-page__row--form(data-modal="")
                     .contact-page__modal-title.modal--title Задать вопрос <br> по процедуре
-                    form.form.contact-page__modal-form(data-parsley-validate="" id="questionForm")
-                        input.form__input(type="text" placeholder="ФИО" required data-parsley-maxlength="10" id="first")
+                    form.form.contact-page__modal-form(data-parsley-validate="" id="questionFormix")
+                        input.form__input(type="text" placeholder="ФИО" required data-parsley-maxlength="10" id="inp1")
                         textarea.form__input.form__textarea#form(name="text", cols="30", rows="10" placeholder="Текст вопроса" required)
                         label.form__checkbox
-                            input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="person")
+                            input.form__checkbox-input.form___input--checkbox(type="checkbox" checked name="person" id="check1")
                             .form__checkbox-box
                                 +checkbox-mark
                             .form__checkbox-text Согласие с политикой в отношении 

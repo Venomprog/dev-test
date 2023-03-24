@@ -72,6 +72,17 @@ sliderList.forEach((item, i) =>{
                 },
             }
             break;
+        case '10':
+            options = {
+                ...options,
+                breakpoints: {
+                    1080:{
+                        slidesPerView: 'auto',
+                        spaceBetween: 20
+                    }
+                },
+                loop: false
+            }
         
     }
     

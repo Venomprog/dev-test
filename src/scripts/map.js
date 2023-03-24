@@ -52,6 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         coordItems.forEach((item) => {
             const coords = item.dataset.cord;
+            const markId = item.dataset.mark;
             // const coords = Array.from(items).map(item => +item.textContent)
             // const title = item.querySelector('.coord-item__title')
             const balloon = item.innerHTML
@@ -60,7 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // console.log(corda)
             const placemark = new ymaps.Placemark(corda, 
             {
-                balloon
+                balloon,
+                
             },
             {
                 balloonContentLayout: BalloonContentLayout,
@@ -68,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // Своё изображение иконки метки.
                 iconLayout: 'default#image',
                 iconImageHref: 'assets/images/mark.png',
+                id: markId,
                 // Размеры метки.
                 iconImageSize: [38, 38],
                 // Смещение левого верхнего угла иконки относительно
@@ -75,8 +78,33 @@ document.addEventListener('DOMContentLoaded', () => {
                 iconImageOffset: [-19, -19],
                 hideIconOnBalloonOpen: false
             });
-    
             clusterer.add(placemark)
+            const markList = document.querySelector('[data-scroll]')
+            placemark.events.add('balloonopen', function (){
+                const baloonId = placemark.options._options.id
+                
+                const trueMark = document.querySelector(`[data-mark="${baloonId}"]`)
+                trueMark.classList.add('active')
+                const markOffset = parseFloat(trueMark.offsetTop)
+                markList.scrollTop = markOffset
+            });
+            placemark.events.add('balloonclose', function (){
+                const baloonId = placemark.options._options.id
+                
+                const trueMark = document.querySelector(`[data-mark="${baloonId}"]`)
+                trueMark.classList.remove('active')
+                
+            });
+
+            
+            item.addEventListener('click', () => {
+                if(!placemark.getParent()){
+                    myMap.setCenter(corda, 12)
+                } 
+
+                placemark.balloon.open();
+            })
+            
         })
     
         myMap.geoObjects.add(clusterer)
@@ -86,19 +114,26 @@ document.addEventListener('DOMContentLoaded', () => {
             myMap.destroy();
         };
     
+        myMap.events.add('click', function (){
+            if (!myMap.balloon.isOpen()) {
+            }
+            else {
+                myMap.balloon.close();
+            }
+        });
+
+        
     }
     
     let coordArr = [];
     }
-    
-
 
 })
 
 // при клике на плейсмарку на карте
 
-//Найти оффсет  и сделать скроллтоп + оффсет карточки до которойскролить
+//Найти оффсет  и сделать скроллтоп + оффсет карточки до которой скролить
 //добавить класс актив для карточки и подсветить ее
 
-// закрывать плейсмарку при клике вне ее
+// закрывать плейсмарку при клике вне ее   готово
 

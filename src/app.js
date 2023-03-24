@@ -18,5 +18,7 @@ import "./scripts/header";
 import "./scripts/filters";
 import "./scripts/counters";
 import "./scripts/scrolling";
+import "./scripts/lkab";
+import "./scripts/slides";
 
 

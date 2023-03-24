@@ -77,3 +77,28 @@ mixin order-form
                 .contact-page-modal__row.contact-page__row--submit(data-modal-visible="") 
                     .contact-page__modal-title.modal--title Вопрос отправлен
                     button.form-button.form__button--close(data-fancybox-close="") Закрыть
+  section.slide-open
+    .container 
+      .slide-open__wrapper.swiper(data-slider="10" data-buttons-id="10")
+        .slides-buttons--swiper 
+          button.custom--button.slides-buttons--left(data-slider-left="10") button left
+          button.custom--button.slides-buttons--right(data-slider-right="10")  button right
+        .slides.slide-open__slides.swiper-wrapper
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'train')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides)
+            +picture(src = 'extruz')
+          .slides__item.swiper-slide(data-slides) 
+            +picture(src = 'extruz')

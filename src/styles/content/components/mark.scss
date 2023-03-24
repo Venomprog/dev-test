@@ -130,6 +130,8 @@
                 font-size: rem(16px);
                 line-height: 130%;
 
+                
+
                 &:nth-child(1){
                     margin-top: 0px;
                 }
@@ -148,7 +150,13 @@
 
 .marks-list{
     width: calc(#{$col-part-d} * 3 - #{$col-gap-d} - 12px);
-    
+    &__item{
+        transition: 0.5s;
+        &.active{
+            background: #CACACA;
+            transition: 0.5s;
+        }
+    }
 }
 
 .cluster{
