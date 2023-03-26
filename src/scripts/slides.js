@@ -16,8 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     slide.addEventListener('mouseover', () => {
       const lastSlide = document.querySelector('.swiper-slide-active');
       const leftSlide = $(lastSlide).index()
-      const rightSlide = ($(leftSlide).index() + 5)
+      const rightSlide = (leftSlide + 5)
       console.log($(slide).index());
+      console.log(leftSlide)
       console.log(rightSlide)
       slide.classList.add('active')
       if ($(slide).index() === leftSlide){
@@ -28,7 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         }) 
       }
       if ($(slide).index() === rightSlide){
-        slide.classList.add('translate-extreme')
+        slides.forEach(slide => {
+          slide.classList.add('translate-extreme')
+        }) 
         // slides.forEach(slide => {
         //   slide.classList.add('translate-extreme')
         // })
